@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <title>Parallax Effect</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/highlight.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        .paraNav {
+
+                top:20px;
+            transition: top 0.4s ease;
+        }
+
+        .paraNav.hide {
+            top:-200px;
+        }
+        .paraNav li a {
+            width: auto;
+            padding: 5px;
+            width: 30px;
+            height: 30px;
+        }
+        .paraNav li.active a {
+            border-radius: 30px;
+        }
+        .paraCont .content-item .img-Wrap {
+            background: transparent;
+        }
+
+        /* reveal */
+        .reveal > div,
+        .reveal > span {
+            opacity: 0;
+        }
+        .reveal.show > div,
+        .reveal.show > span {
+            animation: opacity 1000ms 200ms linear forwards ;
+        }
+
+        .reveal {
+            position: relative;
+        }
+        .reveal::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 0;
+            height: 100%;
+            z-index: 100;
+            background: #fff;
+            background-color: #fff;
+        }
+
+        .reveal.reveal-two::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 0;
+            height: 100%;
+            z-index: 100;
+            background: rgb(255, 127, 8);
+            background-color: rgb(255, 127, 8);
+        }
+
+        /* 기본값 */
+        .reveal.show::before {
+            animation: reveal 1000ms cubic-bezier(0.77, 0, 0.18, 1);
+        }
+        .reveal-RTL.show::before {
+            animation: reveal-RTL 1000ms cubic-bezier(0.77, 0, 0.18, 1);
+        }
+        .reveal-TTB.show::before {
+            animation: reveal-TTB 1000ms cubic-bezier(0.77, 0, 0.18, 1);
+        }
+        .reveal-BTT.show::before {
+            animation: reveal-BTT 1000ms cubic-bezier(0.77, 0, 0.18, 1);
+        }
+
+        /* 두가지 */
+        .reveal.show::after {
+            animation: reveal 1000ms 300ms cubic-bezier(0.77, 0, 0.18, 1);
+        }
+        .reveal-RTL.show::after {
+            animation: reveal 1000ms 300ms cubic-bezier(0.77, 0, 0.18, 1);
+        }
+        .reveal-TTB.show::after {
+            animation: reveal 1000ms 300ms cubic-bezier(0.77, 0, 0.18, 1);
+        }
+        .reveal-BTT.show::after {
+            animation: reveal 1000ms 300ms cubic-bezier(0.77, 0, 0.18, 1);
+        }
+
+        @keyframes opacity {
+            0% {opacity: 0;}
+            60% {opacity: 0;}
+            70% {opacity: 1;}
+            100% {opacity: 1;}
+        }
+
+        @keyframes reveal {
+            0% {width: 0; left: 0;}
+            50% {width: 100%; left: 0;}
+            80% {width: 100%; left: 0;}
+            100% {width: 0; left: 100%;}
+        }
+        @keyframes reveal-RTL {
+            0% {width: 0; right: 0;}
+            50% {width: 100%; right: 0;}
+            80% {width: 100%; right: 0;}
+            100% {width: 0; right: 100%;}
+        }
+        @keyframes reveal-TTB {
+            0% {width: 100%; height: 0; top: 0;}
+            50% {width: 100%; height: 100%; top: 0;}
+            80% {width: 100%; height: 100%; top: 0}
+            100% {width: 100%; height: 0; top: 100%;}
+        }
+        @keyframes reveal-BTT {
+            0% {width: 100%; height: 0; top:auto; bottom: 0;}
+            50% {width: 100%; height: 100%; top:auto; bottom: 0;}
+            80% {width: 100%; height: 100%; top:auto; bottom: 0;}
+            100% {width: 100%; height: 0; top:auto; bottom: 100%;}
+        }
+    </style>
+
+</head>
+
+<body class="parallax">
+    <!-- header -->
+    <header class="paraInfo">
+        <h1><a href="index.html">Parallax Effect08 -jQuery</a></h1>
+        <p>패랠랙스 스크로링 효과 - 리빌 효과</p>
+    </header>
+    <!-- /header -->
+    <!-- main -->
+    <main>
+        <div class="paraScroll">ScrollTop() : <span>0</span>px</div>
+        <nav class="paraNav">
+            <ul>
+                <li class="active"><a href="#section1">s1</a></li>
+                <li><a href="#section2">s2</a></li>
+                <li><a href="#section3">s3</a></li>
+                <li><a href="#section4">s4</a></li>
+                <li><a href="#section5">s5</a></li>
+                <li><a href="#section6">s6</a></li>
+                <li><a href="#section7">s7</a></li>
+                <li><a href="#section8">s8</a></li>
+                <li><a href="#section9">s9</a></li>
+            </ul>
+        </nav>
+        <!-- //nav -->
+        <div class="paraCont">
+            <section id="section1" class="content-item">
+                <span class="num">01</span>
+                <h2 class="title">Section1</h2>
+                <figure class="img-Wrap reveal reveal-two reveal-TTB">
+                    <div class="img"></div>
+                </figure>
+                <p class="desc reveal reveal-two reveal-TTB" data-delay="500"><span>이 세상에는 하나의 괴물이 있다. 그것은 바로 게으름이다. - 토마스 칼라일</span></p>
+            </section>
+            <!-- //section1 -->
+            ​
+            <section id="section2" class="content-item">
+                <span class="num">02</span>
+                <h2 class="title">Section2</h2>
+                <figure class="img-Wrap reveal reveal-RTL">
+                    <div class="img"></div>
+                </figure>
+                <p class="desc reveal reveal-RTL" data-delay="1000"><span>오늘 할 수 있는 일을 내일로 미루지 말라. - 벤자민 프랭클린</span></p>
+            </section>
+            <!-- //section2 -->
+            ​
+            <section id="section3" class="content-item">
+                <span class="num">03</span>
+                <h2 class="title">Section3</h2>
+                <figure class="img-Wrap reveal reveal-TTB">
+                    <div class="img"></div>
+                </figure>
+                <p class="desc reveal"><span>게으른 두뇌는 악마의 공장이다. - 영국 속담</span></p>
+            </section>
+            <!-- //section3 -->
+            ​
+            <section id="section4" class="content-item">
+                <span class="num">04</span>
+                <h2 class="title">Section4</h2>
+                <figure class="img-Wrap reveal reveal-BTT" data-delay="500">
+                    <div class="img"></div>
+                </figure>
+                <p class="desc reveal"><span>모든 죄악의 근본은 조바심과 게으름이다. - 카프카</span></p>
+            </section>
+            <!-- //section4 -->
+            ​
+            <section id="section5" class="content-item">
+                <span class="num">05</span>
+                <h2 class="title">Section5</h2>
+                <figure class="img-Wrap reveal reveal-two reveal-BTT">
+                    <div class="img"></div>
+                </figure>
+                <p class="desc reveal reveal-two reveal-BTT" data-delay="500"><span>게으를 때는 게으름을 알지 못한다. - 하루히 센안</span></p>
+            </section>
+            <!-- //section5 -->
+            ​
+            <section id="section6" class="content-item">
+                <span class="num">06</span>
+                <h2 class="title">Section6</h2>
+                <figure class="img-Wrap reveal reveal-two reveal-RTL">
+                    <div class="img"></div>
+                </figure>
+                <p class="desc reveal reveal-two reveal-RTL" data-delay="500"><span>게으름은 마귀의 배게다. - 네덜란드 속담</span></p>
+            </section>
+            <!-- //section6 -->
+            ​
+            <section id="section7" class="content-item">
+                <span class="num">07</span>
+                <h2 class="title">Section7</h2>
+                <figure class="img-Wrap reveal reveal-TTB reveal-two">
+                    <div class="img"></div>
+                </figure>
+                <p class="desc reveal reveal-two reveal-TTB" data-delay="500"><span>근면은 행운의 어머니이다. - 이탈리아 속담</span></p>
+            </section>
+            <!-- //section7 -->
+            ​
+            <section id="section8" class="content-item">
+                <span class="num">08</span>
+                <h2 class="title">Section8</h2>
+                <figure class="img-Wrap reveal reveal-two reveal-BTT">
+                    <div class="img"></div>
+                </figure>
+                <p class="desc reveal reveal-two reveal-BTT" data-delay="500"><span>근면과 성실이 있으면 불가능한 일은 거의 없다. - 존슨</span></p>
+            </section>
+            <!-- //section8 -->
+            ​
+            <section id="section9" class="content-item">
+                <span class="num">09</span>
+                <h2 class="title">Section9</h2>
+                <figure class="img-Wrap reveal reveal-two reveal-TTB">
+                    <div class="img"></div>
+                </figure>
+                <p class="desc reveal reveal-two reveal-TTB" data-delay="500"><span>사용하지 않는 철은 곧 녹슬어 버린다. - 포르투갈 속담</span></p>
+            </section>
+            <!-- //section9 -->
+        </div>
+        <!-- //contents -->
+    </main>
+    <!-- //main -->
+    <!-- footer -->
+    <footer class="paraFooter">
+        <h1>Parallax <em>Scrolling</em></h1>
+        <div class="footerInfo">
+            <h2>자바스크립트</h2>
+            <ul>
+                <li><a href="javascriptPE01.html">1</a></li>
+                <li><a href="javascriptPE02.html">2</a></li>
+                <li><a href="javascriptPE03.html">3</a></li>
+                <li><a href="javascriptPE04.html">4</a></li>
+                <li><a href="javascriptPE05.html">5</a></li>
+                <li><a href="javascriptPE06.html">6</a></li>
+                <li><a href="javascriptPE07.html">7</a></li>
+                <li class="active"><a href="javascriptPE08.html">8</a></li>
+            </ul>
+        </div>
+        <div class="footerInfo">
+            <h2>제이쿼리</h2>
+            <ul>
+                <li><a href="jqueryPE01.html">1</a></li>
+                <li><a href="jqueryPE02.html">2</a></li>
+                <li><a href="jqueryPE03.html">3</a></li>
+                <li><a href="jqueryPE04.html">4</a></li>
+                <li><a href="jqueryPE05.html">5</a></li>
+                <li><a href="jqueryPE06.html">6</a></li>
+                <li><a href="jqueryPE07.html">7</a></li>
+                <li><a href="jqueryPE08.html">8</a></li>
+            </ul>
+        </div>
+        <div class="footerInfo">
+            <h2>패럴랙스 응용</h2>
+            <ul>
+                <li><a href="parallaxV.html">1</a></li>
+                <li><a href="parallaxVH.html">2</a></li>
+                <li><a href="parallaxEffectA.html">3</a></li>
+            </ul>
+        </div>
+    </footer>
+    <!-- footer -->
+    <!-- info -->
+    <div class="source">
+        <button>소스 보기</button>
+    </div>
+    <!-- //info -->
+    <!-- //source -->
+    <!-- //info -->
+    <!-- modal -->
+    <div id="modal">
+        <div class="modal-bg">
+            <div class="modal-cont">
+                <div class="code-view">
+                    <div class="view-header">
+                        <div class="dot" aria-hidden="true">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="view-title">
+                        <ul>
+                            <li class="active"><a href="#">Html</a></li>
+                            <li><a href="#">CSS</a></li>
+                            <li><a href="#">jquery</a></li>
+                        </ul>
+                    </div>
+                    <div class="view-cont">
+                        <div class="html">
+<pre><code class="language-html">&lt;!DOCTYPE html>
+&lt;html lang="ko">
+
+&lt;head>
+    &lt;meta charset="UTF-8">
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">&lt;/script>
+    &lt;title>Parallax Effect&lt;/title>
+    &lt;link rel="stylesheet" href="../assets/css/style.css">
+    &lt;link rel="stylesheet" href="../assets/css/highlight.css">
+    &lt;link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+&lt;/head>
+
+&lt;body class="parallax">
+    &lt;!-- header -->
+    &lt;header class="paraInfo">
+        &lt;h1>&lt;a href="index.html">Parallax Effect08 -jQuery&lt;/a>&lt;/h1>
+        &lt;p>패랠랙스 스크로링 효과 - 리빌 효과&lt;/p>
+    &lt;/header>
+    &lt;!-- /header -->
+    &lt;!-- main -->
+    &lt;main>
+        &lt;div class="paraScroll">ScrollTop() : &lt;span>0&lt;/span>px&lt;/div>
+        &lt;nav class="paraNav">
+            &lt;ul>
+                &lt;li class="active">&lt;a href="#section1">s1&lt;/a>&lt;/li>
+                &lt;li>&lt;a href="#section2">s2&lt;/a>&lt;/li>
+                &lt;li>&lt;a href="#section3">s3&lt;/a>&lt;/li>
+                &lt;li>&lt;a href="#section4">s4&lt;/a>&lt;/li>
+                &lt;li>&lt;a href="#section5">s5&lt;/a>&lt;/li>
+                &lt;li>&lt;a href="#section6">s6&lt;/a>&lt;/li>
+                &lt;li>&lt;a href="#section7">s7&lt;/a>&lt;/li>
+                &lt;li>&lt;a href="#section8">s8&lt;/a>&lt;/li>
+                &lt;li>&lt;a href="#section9">s9&lt;/a>&lt;/li>
+            &lt;/ul>
+        &lt;/nav>
+        &lt;!-- //nav -->
+        &lt;div class="paraCont">
+            &lt;section id="section1" class="content-item">
+                &lt;span class="num">01&lt;/span>
+                &lt;h2 class="title">Section1&lt;/h2>
+                &lt;figure class="img-Wrap reveal reveal-two reveal-TTB">
+                    &lt;div class="img">&lt;/div>
+                &lt;/figure>
+                &lt;p class="desc reveal reveal-two reveal-TTB" data-delay="500">&lt;span>이 세상에는 하나의 괴물이 있다. 그것은 바로 게으름이다. - 토마스 칼라일&lt;/span>&lt;/p>
+            &lt;/section>
+            &lt;!-- //section1 -->
+            ​
+            &lt;section id="section2" class="content-item">
+                &lt;span class="num">02&lt;/span>
+                &lt;h2 class="title">Section2&lt;/h2>
+                &lt;figure class="img-Wrap reveal reveal-RTL">
+                    &lt;div class="img">&lt;/div>
+                &lt;/figure>
+                &lt;p class="desc reveal reveal-RTL" data-delay="1000">&lt;span>오늘 할 수 있는 일을 내일로 미루지 말라. - 벤자민 프랭클린&lt;/span>&lt;/p>
+            &lt;/section>
+            &lt;!-- //section2 -->
+            ​
+            &lt;section id="section3" class="content-item">
+                &lt;span class="num">03&lt;/span>
+                &lt;h2 class="title">Section3&lt;/h2>
+                &lt;figure class="img-Wrap reveal reveal-TTB">
+                    &lt;div class="img">&lt;/div>
+                &lt;/figure>
+                &lt;p class="desc reveal">&lt;span>게으른 두뇌는 악마의 공장이다. - 영국 속담&lt;/span>&lt;/p>
+            &lt;/section>
+            &lt;!-- //section3 -->
+            ​
+            &lt;section id="section4" class="content-item">
+                &lt;span class="num">04&lt;/span>
+                &lt;h2 class="title">Section4&lt;/h2>
+                &lt;figure class="img-Wrap reveal reveal-BTT" data-delay="500">
+                    &lt;div class="img">&lt;/div>
+                &lt;/figure>
+                &lt;p class="desc reveal">&lt;span>모든 죄악의 근본은 조바심과 게으름이다. - 카프카&lt;/span>&lt;/p>
+            &lt;/section>
+            &lt;!-- //section4 -->
+            ​
+            &lt;section id="section5" class="content-item">
+                &lt;span class="num">05&lt;/span>
+                &lt;h2 class="title">Section5&lt;/h2>
+                &lt;figure class="img-Wrap reveal reveal-two reveal-BTT">
+                    &lt;div class="img">&lt;/div>
+                &lt;/figure>
+                &lt;p class="desc reveal reveal-two reveal-BTT" data-delay="500">&lt;span>게으를 때는 게으름을 알지 못한다. - 하루히 센안&lt;/span>&lt;/p>
+            &lt;/section>
+            &lt;!-- //section5 -->
+            ​
+            &lt;section id="section6" class="content-item">
+                &lt;span class="num">06&lt;/span>
+                &lt;h2 class="title">Section6&lt;/h2>
+                &lt;figure class="img-Wrap reveal reveal-two reveal-RTL">
+                    &lt;div class="img">&lt;/div>
+                &lt;/figure>
+                &lt;p class="desc reveal reveal-two reveal-RTL" data-delay="500">&lt;span>게으름은 마귀의 배게다. - 네덜란드 속담&lt;/span>&lt;/p>
+            &lt;/section>
+            &lt;!-- //section6 -->
+            ​
+            &lt;section id="section7" class="content-item">
+                &lt;span class="num">07&lt;/span>
+                &lt;h2 class="title">Section7&lt;/h2>
+                &lt;figure class="img-Wrap reveal reveal-TTB reveal-two">
+                    &lt;div class="img">&lt;/div>
+                &lt;/figure>
+                &lt;p class="desc reveal reveal-two reveal-TTB" data-delay="500">&lt;span>근면은 행운의 어머니이다. - 이탈리아 속담&lt;/span>&lt;/p>
+            &lt;/section>
+            &lt;!-- //section7 -->
+            ​
+            &lt;section id="section8" class="content-item">
+                &lt;span class="num">08&lt;/span>
+                &lt;h2 class="title">Section8&lt;/h2>
+                &lt;figure class="img-Wrap reveal reveal-two reveal-BTT">
+                    &lt;div class="img">&lt;/div>
+                &lt;/figure>
+                &lt;p class="desc reveal reveal-two reveal-BTT" data-delay="500">&lt;span>근면과 성실이 있으면 불가능한 일은 거의 없다. - 존슨&lt;/span>&lt;/p>
+            &lt;/section>
+            &lt;!-- //section8 -->
+            ​
+            &lt;section id="section9" class="content-item">
+                &lt;span class="num">09&lt;/span>
+                &lt;h2 class="title">Section9&lt;/h2>
+                &lt;figure class="img-Wrap reveal reveal-two reveal-TTB">
+                    &lt;div class="img">&lt;/div>
+                &lt;/figure>
+                &lt;p class="desc reveal reveal-two reveal-TTB" data-delay="500">&lt;span>사용하지 않는 철은 곧 녹슬어 버린다. - 포르투갈 속담&lt;/span>&lt;/p>
+            &lt;/section>
+            &lt;!-- //section9 -->
+        &lt;/div>
+        &lt;!-- //contents -->
+    &lt;/main>
+    &lt;!-- //main -->
+    &lt;!-- footer -->
+    &lt;footer class="paraFooter">
+        &lt;h1>Parallax &lt;em>Scrolling&lt;/em>&lt;/h1>
+        &lt;div class="footerInfo">
+            &lt;h2>자바스크립트&lt;/h2>
+            &lt;ul>
+                &lt;li>&lt;a href="javascriptPE01.html">1&lt;/a>&lt;/li>
+                &lt;li>&lt;a href="javascriptPE02.html">2&lt;/a>&lt;/li>
+                &lt;li>&lt;a href="javascriptPE03.html">3&lt;/a>&lt;/li>
+                &lt;li>&lt;a href="javascriptPE04.html">4&lt;/a>&lt;/li>
+                &lt;li>&lt;a href="javascriptPE05.html">5&lt;/a>&lt;/li>
+                &lt;li>&lt;a href="javascriptPE06.html">6&lt;/a>&lt;/li>
+                &lt;li>&lt;a href="javascriptPE07.html">7&lt;/a>&lt;/li>
+                &lt;li class="active">&lt;a href="javascriptPE08.html">8&lt;/a>&lt;/li>
+            &lt;/ul>
+        &lt;/div>
+        &lt;div class="footerInfo">
+            &lt;h2>제이퀘리&lt;/h2>
+            &lt;ul>
+                &lt;li>&lt;a href="jqueryPE01.html">1&lt;/a>&lt;/li>
+                &lt;li>&lt;a href="jqueryPE02.html">2&lt;/a>&lt;/li>
+                &lt;li>&lt;a href="jqueryPE03.html">3&lt;/a>&lt;/li>
+                &lt;li>&lt;a href="jqueryPE04.html">4&lt;/a>&lt;/li>
+                &lt;li>&lt;a href="jqueryPE05.html">5&lt;/a>&lt;/li>
+                &lt;li>&lt;a href="jqueryPE06.html">6&lt;/a>&lt;/li>
+                &lt;li>&lt;a href="jqueryPE07.html">7&lt;/a>&lt;/li>
+                &lt;li>&lt;a href="jqueryPE08.html">8&lt;/a>&lt;/li>
+            &lt;/ul>
+        &lt;/div>
+    &lt;/footer>
+    &lt;!-- footer -->
+    &lt;!-- info -->
+    &lt;div class="source">
+        &lt;button>소스 보기&lt;/button>
+    &lt;/div>
+    &lt;!-- //info -->
+</code></pre>
+                        </div>
+                        <div class="css">
+<pre><code class="language-css">.paraNav {
+
+    top:20px;
+transition: top 0.4s ease;
+}
+
+.paraNav.hide {
+top:-200px;
+}
+.paraNav li a {
+width: auto;
+padding: 5px;
+width: 30px;
+height: 30px;
+}
+.paraNav li.active a {
+border-radius: 30px;
+}
+.paraCont .content-item .img-Wrap {
+background: transparent;
+}
+
+/* reveal */
+.reveal > div,
+.reveal > span {
+opacity: 0;
+}
+.reveal.show > div,
+.reveal.show > span {
+animation: opacity 1000ms 200ms linear forwards ;
+}
+
+.reveal {
+position: relative;
+}
+.reveal::before {
+content: '';
+position: absolute;
+right: 0;
+top: 0;
+width: 0;
+height: 100%;
+z-index: 100;
+background: #fff;
+background-color: #fff;
+}
+
+.reveal.reveal-two::after {
+content: '';
+position: absolute;
+right: 0;
+top: 0;
+width: 0;
+height: 100%;
+z-index: 100;
+background: rgb(255, 127, 8);
+background-color: rgb(255, 127, 8);
+}
+
+/* 기본값 */
+.reveal.show::before {
+animation: reveal 1000ms cubic-bezier(0.77, 0, 0.18, 1);
+}
+.reveal-RTL.show::before {
+animation: reveal-RTL 1000ms cubic-bezier(0.77, 0, 0.18, 1);
+}
+.reveal-TTB.show::before {
+animation: reveal-TTB 1000ms cubic-bezier(0.77, 0, 0.18, 1);
+}
+.reveal-BTT.show::before {
+animation: reveal-BTT 1000ms cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+/* 두가지 */
+.reveal.show::after {
+animation: reveal 1000ms 300ms cubic-bezier(0.77, 0, 0.18, 1);
+}
+.reveal-RTL.show::after {
+animation: reveal 1000ms 300ms cubic-bezier(0.77, 0, 0.18, 1);
+}
+.reveal-TTB.show::after {
+animation: reveal 1000ms 300ms cubic-bezier(0.77, 0, 0.18, 1);
+}
+.reveal-BTT.show::after {
+animation: reveal 1000ms 300ms cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+@keyframes opacity {
+0% {opacity: 0;}
+60% {opacity: 0;}
+70% {opacity: 1;}
+100% {opacity: 1;}
+}
+
+@keyframes reveal {
+0% {width: 0; left: 0;}
+50% {width: 100%; left: 0;}
+80% {width: 100%; left: 0;}
+100% {width: 0; left: 100%;}
+}
+@keyframes reveal-RTL {
+0% {width: 0; right: 0;}
+50% {width: 100%; right: 0;}
+80% {width: 100%; right: 0;}
+100% {width: 0; right: 100%;}
+}
+@keyframes reveal-TTB {
+0% {width: 100%; height: 0; top: 0;}
+50% {width: 100%; height: 100%; top: 0;}
+80% {width: 100%; height: 100%; top: 0}
+100% {width: 100%; height: 0; top: 100%;}
+}
+@keyframes reveal-BTT {
+0% {width: 100%; height: 0; top:auto; bottom: 0;}
+50% {width: 100%; height: 100%; top:auto; bottom: 0;}
+80% {width: 100%; height: 100%; top:auto; bottom: 0;}
+100% {width: 100%; height: 0; top:auto; bottom: 100%;}
+}
+</code></pre>
+                        </div>
+                        <div class="jquery">
+<pre><code class="language-js">const scrollReveal = function(){
+    const reveal = document.querySelectorAll(".reveal");
+
+    reveal.forEach(el => {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY + window.innerHeight;
+        let revealData = el.dataset.delay;
+        
+        if(scrollTop >= el.parentElement.offsetTop) {
+            if (revealData == undefined) {
+                el.classList.add("show");
+            } else {
+                setTimeout(()=>{
+                    el.classList.add("show");
+                }, revealData)
+            }
+        }               
+    })
+}
+window.addEventListener("scroll", scrollReveal);
+
+function scrollProgress() {
+    let scrollTop = (document.documentElement.scrollTop || window.scrollY || window.pageYOffset) + window
+        .innerHeight / 2;
+    // alert(window.innerHeight/2)
+
+    // for (let i = 1; i < 10; i++) {
+    //     if (scrollTop > document.getElementById("section" + i).offsetTop) {
+    //         document.getElementById("section" + i).classList.add("show");
+    //     }
+    // }
+
+    document.querySelectorAll(".content-item").forEach(item => {
+        scrollTop > item.offsetTop ? item.classList.add("show") : item.classList.remove("show");
+    })
+
+    //출력
+    document.querySelector(".paraScroll span").innerText = parseInt(scrollTop);
+
+    //메뉴
+    document.querySelectorAll(".content-item").forEach((item, index) => {
+        if (scrollTop >= item.offsetTop) {
+            document.querySelectorAll(".paraNav ul li").forEach(li => {
+                li.classList.remove("active");
+            });
+            document.querySelector(".paraNav ul li:nth-child(" + (index + 1) + ")").classList.add(
+                "active");
+        }
+    })
+}
+
+window.addEventListener("scroll", scrollProgress)
+</code></pre>
+                        </div>
+                    </div>
+                </div>
+                <button>닫기</button>
+            </div>
+        </div>
+    </div>
+    <!-- //modal -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"> </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"> </script>
+    <script src="../assets/js/custom.js"></script>
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        const scrollReveal = function(){
+            const reveal = document.querySelectorAll(".reveal");
+
+            reveal.forEach(el => {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY + window.innerHeight;
+                let revealData = el.dataset.delay;
+                
+                if(scrollTop >= el.parentElement.offsetTop) {
+                    if (revealData == undefined) {
+                        el.classList.add("show");
+                    } else {
+                        setTimeout(()=>{
+                            el.classList.add("show");
+                        }, revealData)
+                    }
+                }               
+            })
+        }
+        window.addEventListener("scroll", scrollReveal);
+
+        function scrollProgress() {
+            let scrollTop = (document.documentElement.scrollTop || window.scrollY || window.pageYOffset) + window
+                .innerHeight / 2;
+            // alert(window.innerHeight/2)
+
+            // for (let i = 1; i < 10; i++) {
+            //     if (scrollTop > document.getElementById("section" + i).offsetTop) {
+            //         document.getElementById("section" + i).classList.add("show");
+            //     }
+            // }
+
+            document.querySelectorAll(".content-item").forEach(item => {
+                scrollTop > item.offsetTop ? item.classList.add("show") : item.classList.remove("show");
+            })
+
+            //출력
+            document.querySelector(".paraScroll span").innerText = parseInt(scrollTop);
+
+            //메뉴
+            document.querySelectorAll(".content-item").forEach((item, index) => {
+                if (scrollTop >= item.offsetTop) {
+                    document.querySelectorAll(".paraNav ul li").forEach(li => {
+                        li.classList.remove("active");
+                    });
+                    document.querySelector(".paraNav ul li:nth-child(" + (index + 1) + ")").classList.add(
+                        "active");
+                }
+            })
+        }
+
+        window.addEventListener("scroll", scrollProgress)
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,560 @@
+/* 컨테이너임 */
+.inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* 헤더 부분임 */
+header {
+    width: 100%;
+    background-color: #fff;
+    height: 90px;
+    box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, .1);
+}
+
+/* 헤더의 정렬 중앙을 맞추고 자동으로 배열 */
+.headinner {
+    max-width: 1920px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* 로고의 크기를 조절함 */
+.logo_whale {
+    position: absolute;
+    top: 23px;
+    left: 6%;
+    width: 200px;
+    height: 40px;
+    z-index: 5;
+}
+
+/* 로고의 이미지를 가져옴 */
+.logo_whale a {
+    display: block;
+    text-align: center;
+    line-height: 40px;
+    text-indent: -9999em;
+    background: url(../img/logo_whale.svg) no-repeat center;
+}
+
+/* 헤드 부분을 고정함 */
+.ccHead {
+    position: fixed;
+    z-index: 90;
+    top: 0;
+}
+
+.ccGnb {
+    width: 100%;
+}
+
+/* 버튼에 애니메이션을 주고 효과를 만듬 */
+.whale_down {
+    position: absolute;
+    top: 20px;
+    right: 4%;
+    width: 125px;
+    height: 50px;
+    color: #15c5aa;
+    font-size: 18px;
+    text-align: center;
+    line-height: 50px;
+    border: 1px solid #15c5aa;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+}
+
+/* 버튼에 마우스를 가져다 댈경우 발생 되는 효과를 지정 */
+.whale_down:hover {
+    background: #15c5aa;
+    color: #fff;
+}
+
+/* 헤더 메뉴리스트의 중앙을 맞춤 */
+.dep01 {
+    text-align: center;
+    overflow: hidden;
+}
+
+/* 헤더를 가운데 정렬에서 인라인 블록으로 옆으로 정렬함 */
+.dep01 li {
+    display: inline-block;
+    /* width:15%; */
+    width: 12%;
+    text-align: center;
+}
+
+/* 마우스를 가져다대면 li의 리스트 값 색이 변하는 효과를 줌 */
+.dep01 .depth1_menu:hover {
+    color: #05c3a7;
+}
+
+/* li에 값을 지정해줌 색과 크기 글자 폰트 사이즈까지 */
+.dep01 a.depth1_menu {
+    color: #2d1d1d;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 90px;
+}
+
+/* 두번째 메뉴바! */
+.whywhale_top {
+    width: 100%;
+    margin-top: 90px;
+}
+
+.whywhale_top .tabWrap {
+    width: 100%;
+}
+
+/* 두번째 메뉴바에 색상과 크기를 지정해줍니다. */
+.whywhale_top .fnTab {
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}
+
+/* 두번째 메뉴바에 효과를 주고 좌로 정렬합니다. */
+.whywhale_top .fnTab li {
+    display: inline-block;
+    width: 32%;
+    text-align: center;
+    max-width: 330px;
+    height: 70px;
+}
+
+/* 체크 sgv를 컨트롤 */
+.whywhale_top .fnTab li .tab_contents {
+    display: inline-block;
+    color: #838383;
+    font-size: 18px;
+    padding: 22px 30px;
+    cursor: pointer;
+    background-position: bottom 24px left;
+    background-size: 20px auto;
+    background-repeat: no-repeat;
+}
+
+/* 체크 sgv 색상을 맞춰줌 */
+.whywhale_top .fnTab li.current .tab_contents {
+    background-position: top 23px left;
+    background-size: 20px auto;
+}
+
+/* 체크 sgv가져옴 */
+.whywhale_top li:nth-child(1) .tab_contents {
+    background-image: url(../img/top_check.png);
+}
+
+/* 글자 색을 지정 첫번째만 */
+.whywhale_top .fnTab li:nth-child(1).current .tab_contents {
+    color: #05d6b4;
+}
+
+/* 옆에 줄을 만들어주는 명령어 */
+.whywhale_top .fnTab li:nth-child(2) {
+    border-right: 1px solid #838383;
+    border-left: 1px solid #838383;
+}
+
+/* 하고 싶은 일들, 해야 할 일들 네이버 웨일로 한 번에! */
+.tabcontent h3 {
+    font-size: 50px;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* 네이버 웨일의 다양한 기능을 만나보세요! */
+.tabcontent .tx-under {
+    font-size: 30px;
+    color: #fff;
+    padding: 30px 0 50px;
+}
+
+/* 다운로드 버튼 그대로 가져옴1 */
+.btn_whaledown>a {
+    display: inline-block;
+    width: 250px;
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+    border-radius: 45px;
+    height: 77px;
+    line-height: 77px;
+    position: relative;
+    background: #05d6b4;
+}
+
+/* 다운로드 버튼 그대로 가져옴2 */
+.btn_whaledown>a:after {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 77px;
+    background: url('../img/icon_btn_arrow.png') 50% 50% no-repeat;
+    background-size: 100%;
+    margin-left: 18px;
+    vertical-align: top;
+}
+
+/* 백그라운드를 가져옴 */
+.whywhale_topbn.tab1 {
+    background: url('../img/top_tasking_bg.jpg') no-repeat top center/ cover;
+}
+
+/* 백그라운드 안에 글씨를 가운데로 맞춤 */
+.toptxArea {
+    display: table-cell;
+    width: 100%;
+    vertical-align: middle;
+}
+
+/* 찾아보니 모든 whywhale_의 inner에 크기를 지정해줌으로 코드를 줄일수있음 */
+.tabcontent [class*='whywhale_'] .inner {
+    display: table;
+    height: 670px;
+    width: 100%;
+}
+
+/* 배경 색을 지정해줍니다 아래로 4개까지 */
+.tabcontent article[class*='whywhale_a_']:nth-child(even) {
+    background-color: #ecedf1;
+}
+
+.tabcontent article[class*='whywhale_a_']:nth-child(odd) {
+    background-color: #fff;
+}
+
+#tab2.tabcontent article[class*='whywhale_a_']:nth-child(even) {
+    background-color: #fff;
+}
+
+#tab2.tabcontent article[class*='whywhale_a_']:nth-child(odd) {
+    background-color: #ecedf1;
+}
+
+.tabcontent article[class*='whywhale_a_']:nth-child(odd) .function_tx {
+    padding-left: 5%;
+}
+
+.tabcontent [class*='whywhale_a_'] .function_tx {
+    display: table-cell;
+}
+
+.tabcontent [class*='whywhale_a_'] .function_img {
+    display: table-cell;
+    width: 50%;
+}
+
+.tabcontent [class*='whywhale_a_'] .function_img img {
+    display: block;
+    width: 100%;
+}
+
+.tabcontent [class*='whywhale_a_'] .function_tx h3 {
+    color: #000;
+    position: relative;
+    padding-left: 80px;
+}
+
+.tabcontent [class*='whywhale_a_'] .function_tx h4 {
+    color: #333130;
+    font-size: 26px;
+}
+
+/* 모바일 pc 버튼을 설정 */
+.devicetype {
+    width: 100%;
+    margin-top: 30px;
+}
+
+/* 모바일 pc 버튼을 설정 */
+.devicetype>span {
+    display: inline-block;
+    width: 118px;
+    height: 70px;
+    background-size: 100%;
+}
+
+.devicetype.dule>p {
+    display: inline-block;
+    padding-top: 20px;
+    position: relative;
+    width: 118px;
+    height: 76px;
+}
+
+.devicetype.dule>p span.tx {
+    position: absolute;
+    line-height: 1em;
+    font-size: 16px;
+    color: #919191;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+}
+
+.devicetype span.tx.last {
+    margin-left: 15px;
+}
+
+
+/* pc버튼 불러오기 */
+.devicetype .device_pc {
+    background: url('../img/icon_pc.png') no-repeat bottom center;
+    background-size: 100%;
+    width: 100%;
+    width: 118px;
+    height: 76px;
+}
+
+/* 모바일 버튼 불러오기 */
+.devicetype .device_m {
+    background: url('../img/icon_m.png') no-repeat bottom center;
+    background-size: 100%;
+    width: 100%;
+    width: 118px;
+    height: 76px;
+}
+
+.devicetype.dule .device_pc {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+}
+
+/* h3 글자 크기와 패딩 라인하이트 */
+.tabcontent .function_tx h3 {
+    height: 70px;
+    line-height: 70px;
+    padding-left: 80px;
+}
+
+/* h4 글자 크기와 패딩 라인하이트 */
+.tabcontent .function_tx h4 {
+    margin: 30px 0 50px;
+}
+
+
+.tabcontent .function_detailgo li {
+    width: 100%;
+    padding-left: 30px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.tabcontent .function_detailgo li a {
+    display: inline-block;
+    color: #2d68d2;
+    line-height: 20px;
+    font-size: 18px;
+}
+
+.tabcontent .function_detailgo li:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    content: "";
+    clear: both;
+    width: 20px;
+    height: 20px;
+    background: url('../img/icon_function_detailgo.png') no-repeat top center;
+    background-size: 100%;
+}
+
+.tabcontent .function_detailgo2 li a {
+    width: 100%;
+    display: block;
+    color: #2d68d2;
+    line-height: 20px;
+    font-size: 18px;
+}
+
+.tabcontent [class*='whywhale_a_'] h3:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    content: "";
+    clear: both;
+    width: 70px;
+    height: 70px;
+    background-size: 100%;
+}
+
+/* 아이콘을 불러옴 */
+.whywhale_a_sidebar {
+    width: 100%;
+}
+
+.whywhale_a_sidebar h3:before {
+    background: url('../img/icon_why_tab1_01.png') no-repeat top center;
+}
+
+.whywhale_a_quick {
+    width: 100%;
+}
+
+.whywhale_a_quick h3:before {
+    background: url('../img/icon_why_tab1_02.png') no-repeat top center;
+}
+
+.whywhale_a_dule {
+    width: 100%;
+}
+
+.whywhale_a_dule h3:before {
+    background: url('../img/icon_why_tab1_03.png') no-repeat top center;
+}
+
+.whywhale_a_capture {
+    width: 100%;
+}
+
+.whywhale_a_capture h3:before {
+    background: url('../img/icon_why_tab1_04.png') no-repeat top center;
+}
+
+.whywhale_a_on {
+    width: 100%;
+}
+
+.whywhale_a_on h3:before {
+    background: url('../img/icon_why_tab1_05.png') no-repeat top center;
+}
+
+/* 푸터 전 마지막 놈 */
+
+.sec_whaledown {
+    width: 100%;
+    background-color: #fff;
+    padding: 10% 0;
+    text-align: center;
+}
+
+.sec_whaledown .btn_whaledown {
+    text-align: center;
+}
+
+.downsec_gif {
+    display: inline-block;
+    margin-bottom: 3%;
+    max-width: 560px;
+}
+
+/* footer */
+footer {
+    padding: 50px 0;
+    width: 100%;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+footer h2 {
+    display: inline-block;
+    margin: 0 0 20px;
+    max-width: 141px;
+}
+
+.foot_addr {
+    padding: 20px 0;
+    color: #c0c0c0;
+    font-size: 16px;
+}
+
+footer ul li {
+    display: inline-block;
+    position: relative;
+    margin: 10px 20px 0;
+    text-align: center;
+}
+
+footer ul li::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -21px;
+    width: 1px;
+    height: 18px;
+    background: #dadada;
+}
+
+footer ul li:last-child::after {
+    display: none;
+}
+
+footer ul li a {
+    font-size: 16px;
+    color: #c0c0c0;
+    font-weight: 300;
+}
+
+footer .inner {
+    position: relative;
+}
+
+footer .go_beta {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    text-align: center;
+    border: 1px solid #c0c0c0;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+footer .go_beta a {
+    position: relative;
+    padding: 0 15px 0 45px;
+    height: 43px;
+    color: #c0c0c0;
+    font-size: 16px;
+    line-height: 43px;
+}
+
+footer .go_beta a::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: calc(50% - 10px);
+    left: calc(50% - 55px);
+    width: 20px;
+    height: 20px;
+    background: url(../img/beta.svg) no-repeat;
+}
+
+footer .pc_only {
+    display: inline-block;
+}
+
+.en footer .go_beta a::before {
+    left: calc(50% - 60px);
+}
+
+/* 
+@media (max-width: 800px) {
+    .inner {
+        max-width: 700px;
+        margin: 0 auto;
+        width: 100%;
+    }
+} */
+

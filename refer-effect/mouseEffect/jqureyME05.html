@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouse Effect</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/highlight.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        .moveWrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .moveImage {
+            position: relative;
+        }
+
+        .moveImage .mImg {
+            width: 50vw;
+            height: 60vh;
+            overflow: hidden;
+            position: relative;
+            transition: tranform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
+        }
+
+        .moveImage:hover .mImg {
+            transform: scale(1.025);
+        }
+
+        .moveImage .mImg img {
+            left: -5%; top: -5%;
+            width: 100%;
+            position: absolute;
+            width: 110%;
+            height: 110%;
+            object-fit: cover;
+            transition: tranform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
+        }
+
+        .moveImage .mText {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 1.3em;
+            white-space: nowrap;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 1vw;
+            font-family: 'NEXONLv1Gothic';
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        .cursor {
+            position: absolute;
+            width: 20px; height: 20px;
+            background: #fff;
+            border-radius: 50%;
+            z-index: 10000;
+            user-select: none;
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+<body class="bg bg9 blue">
+
+    <!-- contents -->
+    <main>
+        <div class="cursor"></div>
+        <div class="moveWrap">
+            <article class="moveImage">
+                <div class="mImg">
+                    <img src="../assets/img/bg8@2.jpg" alt="이미지">
+                </div>
+                <div class="mText">
+                    <p>If it's something you can't say in "front", don't say in "back" either</p>
+                    <p>"앞"에서 할 수 없는 말이라면, "뒤"에서도 하지마라.</p>
+                </div>
+            </article>
+        </div>
+    </main>
+    <!-- contents -->
+
+    <!-- info -->
+    <div class="info">
+        <h1><a href="./index.html">mouse Effect 05 - jQurey</a></h1>
+        <p>마우스 이펙트 - 마우스 방향에 따라 움직이기</p>
+    </div>
+
+    <div class="info right">
+        <ul>
+            <li><a href="javascriptME01.html">1</a></li>
+            <li><a href="javascriptME02.html">2</a></li>
+            <li><a href="javascriptME03.html">3</a></li>
+            <li><a href="javascriptME04.html">4</a></li>
+            <li><a href="javascriptME05.html">5</a></li>
+        </ul>
+        <ul>
+            <li><a href="jqureyME01.html">1</a></li>
+            <li><a href="jqureyME02.html">2</a></li>
+            <li><a href="jqureyME03.html">3</a></li>
+            <li><a href="jqureyME04.html">4</a></li>
+            <li class="active"><a href="jqureyME05.html">5</a></li>
+        </ul>
+    </div>
+
+    <div class="info left list">
+        <ul>
+            <li>pageX : <span class="pageX">0</span></li>
+            <li>pageY : <span class="pageY">0</span></li>
+        </ul>
+    </div>
+
+
+    <div class="info bottom">
+        <button>소스보기</button>
+    </div>
+    <!-- //info -->
+
+    <!-- modal -->
+    <div id="modal">
+        <div class="modal-bg">
+            <div class="modal-cont">
+                <div class="code-view">
+                    <div class="view-header">
+                        <div class="dot" aria-hidden="true">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="view-title">
+                        <ul>
+                            <li class="active"><a href="#">HTML</a></li>
+                            <li><a href="#">CSS</a></li>
+                            <li><a href="#">Javascript</a></li>
+                        </ul>
+                    </div>
+                    <div class="view-cont">
+                        <div>
+                            <pre><code class="language-html">&lt;main&gt;
+    &lt;div class="cursor"&gt;&lt;/div&gt;
+    &lt;article class="mouseCont"&gt;
+        &lt;p&gt;Pain is &lt;em&gt;temporary&lt;/em&gt;Quitting lasts forever.&lt;/p&gt;
+        &lt;h2&gt;고통은 잠깐이다. &lt;em&gt;포기는&lt;/em&gt;영원히 남는다.&lt;/h2&gt;
+    &lt;/article&gt;
+&lt;/main&gt;
+</code></pre>
+                        </div>
+                        <div>
+                            <pre><code class="language-css">.mouseCont {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    font-family: 'NEXONLv1Gothic';
+    cursor: none;
+}
+
+.mouseCont p {
+    font-size: 2.5vw;
+    line-height: 2.3;
+    font-weight: 300;
+}
+
+.mouseCont h2 {
+    font-size: 3vw;
+    font-weight: normal;
+    font-weight: 400;
+}
+
+.mouseCont em {
+    font-style: normal;
+    border-bottom: 0.2vw dashed orange;
+    color: orange;
+}
+
+.cursor {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    z-index: 9999;
+    background-color: #fff;
+    user-select: none;
+    pointer-events: none;
+    transition: transform 0.3s, opacity 0.2s;
+    mix-blend-mode: difference;
+    /* 디퍼런스 효과 정리하기 */
+}
+
+.cursor.active {
+    transform: scale(20);
+}
+
+.info.left.list li.active {
+    text-decoration: underline;
+    color: orange;
+}
+</code></pre>
+                        </div>
+                        <div>
+                            <pre><code class="language-javascript"> const w = $(".cursor").width()/2;
+const h = $(".cursor").height()/2;
+
+//움직임 효과
+$(window).mousemove(function(e){
+    gsap.to(".cursor", {duation:0.4, left: e.pageX, top: e.pageY});
+});
+
+//오버 효과
+$(".mouseCont em").hover(function(){
+    $(".cursor").addClass("active");
+}, function(){
+    $(".cursor").removeClass("active");
+});
+
+//출력용 리무브 클래스로 클릭ㄱ시 에디트를 전부 삭제 그후 디스로 에드클래스
+$(".info.left.list li").click(function(){
+    $(".info.left.list li").removeClass();
+    $(this).addClass("active");
+    // const text = $(this).text();
+    $(".cursor").css("mix-blend-mode", $(this).text());
+})
+</code></pre>
+                        </div>
+                    </div>
+                </div>
+                <button>닫기</button>
+            </div>
+        </div>
+    </div>
+    <!-- //modal -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="../assets/js/custom.js"></script>
+    <script src="../assets/js/highlight.min.js"></script>
+
+    </script>
+    <script src="../assets/js/custom.js"></script>
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        $(".moveImage").mousemove(function(e){
+            gsap.to(".cursor", {duration: .2, left: e.pageX, top: e.pageY -10});
+
+            let pageX = e.pageX;
+            let pageY = e.pageY;
+
+            //1. 좌표값을 가운데로 정렬
+            let standardX = $(window).width() / 2 - pageX;
+            let standardY = $(window).height() / 2 - pageY;
+
+            //이미지 움직임
+            $(".mimg img").attr({"style":"transform: translate("+ standardX/20 + "px, " + standardY/20 + "px)"});
+
+            //출력
+            $(".pageX"). text(pageX);
+            $(".pageY"). text(pageY);
+            $(".standardX"). text(standardX);
+            $(".standardY"). text(standardY);
+        });
+    </script>
+</body>
+
+</html>

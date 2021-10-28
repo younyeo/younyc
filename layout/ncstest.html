@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 시험</title>
+    <style>
+        @font-face {
+            font-family: 'TmonMonsori';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            margin: 0 auto;
+        }
+
+        body {
+            font-family: 'TmonMonsori';
+            color: #ffffff;
+            font-size: 30px;
+            text-transform: uppercase;
+            text-align: center;
+            background-color: #ffebee;
+        }
+
+        header {
+            background-color: #4e342e;
+            height: 100px;
+            width: 1200px;
+            line-height: 100px;
+        }
+
+        nav {
+            background-color: #c62828;
+            height: 100px;
+            width: 1200px;
+            line-height: 100px;
+        }
+
+        main {
+            background-color: #ff5252;
+            height: 600px;
+            width: 1200px;
+            line-height: 600px;
+        }
+
+        .side {
+            background: #e53935;
+            float: left;
+            height: 600px;
+            width: 300px;
+            line-height: 600px;
+        }
+
+
+        .content1 {
+            background: #ff1744;
+            float: left;
+            width: 900px;
+            height: 300px;
+            line-height: 300px;
+        }
+
+        .cont1 {
+            background: #f44336;
+            float: left;
+            width: 380px;
+            height: 250px;
+            margin: 25px 45px;
+            line-height: 250px;
+        }
+
+        .cont2 {
+            background: #f44336;
+            float: left;
+            width: 300px;
+            height: 200px;
+            width: 380px;
+            height: 250px;
+            margin: 25px 15px;
+            line-height: 250px;
+        }
+
+        footer {
+            background-color: #c62828;
+            height: 100px;
+            width: 1200px;
+            line-height: 100px;
+        }
+/*  */
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <div>header</div>
+        </header>
+        <nav>
+            <div>nav</div>
+        </nav>
+        <main>
+            <div class="side">side</div>
+            <span class="content1">content1</span>
+            <div class="cont">
+                <span class="cont1">cont1</span>
+                <span class="cont2">cont2</span>
+            </div>
+        </main>
+        <footer>
+            <div>footer</div>
+        </footer>
+    </div>
+</body>
+
+</html>

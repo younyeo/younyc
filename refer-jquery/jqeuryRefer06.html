@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>윤여찬 | younyeochan | JAVASCRIPT</title>
+    <link rel="stylesheet" href="https://tistory4.daumcdn.net/tistory/2933724/skin/images/font.css">
+    <link rel="stylesheet" href="https://tistory4.daumcdn.net/tistory/2933724/skin/images/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/themes/prism-okaidia.min.css"
+        integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/favicon_114.png">
+    <link rel="icon" href="../assets/ico/icon.png">
+    <link rel="icon" href="../assets/ico/favicon_57.png" sizes="16x16">
+    <link rel="icon" href="../assets/ico/favicon_72.png" sizes="32x32">
+    <link rel="icon" href="../assets/ico/favicon_114.png" sizes="48x48">
+    <link rel="icon" href="../assets/ico/favicon_114.png" sizes="64x64">
+    <link rel="icon" href="../assets/ico/favicon_114.png" sizes="128x128">
+
+    <!-- 제이쿼리 소스 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <a id="top" href="#">
+      <div>top</div>
+    </a>
+    <div class="title">
+      <h1><a href="index.html">애니메이션 메서드</a></h1>
+    </div>
+    <ul class="page">
+      <li><a href="../refer-html/index.html">HTML</a></li>
+      <li><a href="../refer-css/index.html">CSS</a></li>
+      <li><a href="../refer-javascript/index.html">JAVASCRTP</a></li>
+      <li><a href="../refer-jquery/index.html">JQUERY</a></li>
+  </ul>
+    <nav class="menu">
+      <ul>
+        <li><a href="jqeuryRefer01.html">선택자</a></li>
+        <li><a href="jqeuryRefer02.html">선택자 메소드</a></li>
+      </ul>
+      <ul>
+        <li><a href="jqeuryRefer03.html">속성 메서드</a></li>
+        <li><a href="jqeuryRefer04.html">조작 메서드</a></li>
+        <li><a href="jqeuryRefer05.html">데이터 메서드</a></li>
+        <li class="active"><a href="jqeuryRefer06.html">애니메이션 메서드</a></li>
+        <li><a href="jqeuryRefer07.html">이벤트 메서드</a></li>
+      </ul>
+      <ul>
+        <li><a href="jqeuryRefer08.html">샘플</a></li>
+      </ul>
+    </nav>
+    <hr>
+
+    <div class="table">
+      <table>
+        <caption>기본 선택자</caption>
+        <colgroup>
+          <col style="width: 8%;" />
+          <col style="width: 20%;" />
+          <col style="width: 20%;" />
+          <col style="width: 20%;" />
+          <col style="width: 32%;" />
+        </colgroup>
+        <thead>
+          <tr>
+            <th class="center">종류</th>
+            <th>제이쿼리</th>
+            <th>예시</th>
+            <th>자바스크립트</th>
+            <th>설명</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="3" class="center"><a href="#sample01">기본</a></td>
+            <td>.hide() 👍🏻</td>
+            <td>$("selector").hide()</td>
+            <td> </td>
+            <td>.hide()는 선택한 요소를 사라지게 합니다.</td>
+          </tr>
+          <tr>
+            <td>.show() 👍🏻</td>
+            <td>$("selector").show()</td>
+            <td> </td>
+            <td>.show()는 선택한 요소를 나타나게 합니다.</td>
+          </tr>
+          <tr>
+            <td>.toggle() 👍🏻</td>
+            <td>$("selector").toggle()</td>
+            <td> </td>
+            <td>.toggle()은 선택한 요소가 보이면 보이지 않게, 보이지 않으면 보이게 합니다.</td>
+          </tr>
+          <tr>
+            <td rowspan="4" class="center"><a href="#sample01">페이드</a></td>
+            <td>.fadeIn()</td>
+            <td>$("selector").fadeIn()</td>
+            <td> </td>
+            <td>.fadeIn()은 선택한 요소를 서서히 나타나게 합니다.</td>
+          </tr>
+          <tr>
+            <td>.fadeOut()</td>
+            <td>$("selector").fadeOut()</td>
+            <td> </td>
+            <td>.fadeOut()은 선택한 요소를 서서히 사라지게 합니다.</td>
+          </tr>
+          <tr>
+            <td>.fadeTo()</td>
+            <td>$("selector").fadeTo()</td>
+            <td> </td>
+            <td>선택한 요소의 투명도를 조절합니다.</td>
+          </tr>
+          <tr>
+            <td>.fadeToggle()</td>
+            <td>$("selector").fadeToggle()</td>
+            <td> </td>
+            <td>.fadeToggle()은 보이는 요소는 보이지 않게, 보이지 않는 요소는 보이게 합니다.</td>
+          </tr>
+          <tr>
+            <td rowspan="3" class="center"><a href="#sample01">슬라이드</a></td>
+            <td>.slideDown()</td>
+            <td>$("selector").slideDown()</td>
+            <td> </td>
+            <td>.slideDown()은 선택한 요소를 아래쪽으로 서서히 나타나게 합니다.</td>
+          </tr>
+          <tr>
+            <td>.slideUp()</td>
+            <td>$("selector").slideUp()</td>
+            <td> </td>
+            <td>.slideUp()는 선택한 요소를 위쪽으로 서서히 사라지게 합니다.</td>
+          </tr>
+          <tr>
+            <td>.slideToggle()</td>
+            <td>$("selector").slideToggle()</td>
+            <td> </td>
+            <td>.slideToggle()은 보이지 않는 요소는 아래쪽으로 서서히 나타나게 하고, 보이는 요소는 위쪽으로 서서히 사라지게 합니다.</td>
+          </tr>
+          <tr>
+            <td rowspan="7" class="center"><a href="#sample01">커스텀</a></td>
+            <td>.animate() 👍🏻</td>
+            <td>$("selector").animate()</td>
+            <td> </td>
+            <td>.animate()는 애니메이션 효과를 만듭니다.</td>
+          </tr>
+          <tr>
+            <td>.delay()</td>
+            <td>$("selector").delay()</td>
+            <td> </td>
+            <td>.delay()는 실행 중인 함수를 정해진 시간만큼 중지(연기) 시킵니다.</td>
+          </tr>
+          <tr>
+            <td>.finsish()</td>
+            <td>$("selector").finsish()</td>
+            <td> </td>
+            <td>.finish() 메서드 선택한 요소의 진행중인 애니메이션을 강제로 종료합니다.</td>
+          </tr>
+          <tr>
+            <td>.stop()</td>
+            <td>$("selector").stop()</td>
+            <td> </td>
+            <td>해당하는 애니메이션 효과를 바로 멈춥니다.</td>
+          </tr>
+          <tr>
+            <td>.queue()</td>
+            <td>$("selector").queue()</td>
+            <td> </td>
+            <td> 큐는 한쪽 끝(rear)에서는 삽입연산만 이루어지며 다른 한쪽 끝(front)에서는 삭제연산만 이루어지는 유한 순서 리스트이다.</td>
+          </tr>
+          <tr>
+            <td>.clearQueue()</td>
+            <td>$("selector").clearQueue()</td>
+            <td> </td>
+            <td>큐는 특정한 엘리먼트에서 발생될 애니메이션의 목록입니다. 제이쿼리를 사용해 엘리먼트에서 애니메이션을 실행시킬 때마다 애니메이션은 큐에 저장됩니다.엘리먼트는 큐의 모든 애니메이션이 완료될 때까지 큐에 저장된 애니메이션을 한번에 하나씩 실행시킵니다.다시 말해, 애니메이션 효과의 명령은 큐(Queue)에 누적됩니다.큐는 먼저 들어간 것이 먼저 나오는 공간을 말합니다.jQuery의 효과 메서드를 사용하면 효과 명령이 차례차례 큐에 들어가게 되고, 들어간 순서대로 실행되게 됩니다.</td>
+          </tr>
+          <tr>
+            <td>.dequeue()</td>
+            <td>$("selector").dequeue()</td>
+            <td> </td>
+            <td>queue 메서드를 사용했을때 내부에서 반드시 사용해 주어야하는 메서드입니다.</td>
+          </tr>
+        </table>
+      </div>
+
+    <hr>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
+</body>
+
+</html>

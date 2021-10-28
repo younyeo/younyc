@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=[device-width], initial-scale=1.0">
+    <title>자바스크립트 연습</title>
+</head>
+
+<body>
+    <script>
+
+        {
+            const num = [100, 200, 300, 400, 500];
+
+            for (let i = 0; i < num.length; i++) {
+                document.write(num[i]);
+            }
+            document.write("<br>")
+        }
+
+        {
+            const num = [100, 200, 300, 400, 500];
+
+            num.forEach(function (el){
+                document.write(el);
+            })
+            document.write("<br>")
+        }
+
+        {
+            const num = [100, 200, 300, 400, 500];
+
+            num.forEach((el,index,array)=>{
+                document.write(el, "<br>");
+                document.write(index, "<br>");
+                document.write(array, "<br>");
+            })
+            document.write("<br>")
+        }
+
+        //map()
+
+        {
+            const num = [100, 200, 300, 400, 500];
+
+            num.map(el=>{
+                document.write(el);
+            })
+            document.write("<br>")
+        }
+        // 100, 200, 300
+        {
+            const obj = [
+                {a:100},
+                {a:200},
+                {a:300}
+            ];
+            // document.write(obj[0].a, "<br>")
+            // document.write(obj[1].a, "<br>")
+            // document.write(obj[2].a, "<br>")
+
+            // obj.map(el => document.write(el.a))
+        }
+
+        {
+            function func(num, name, job){
+                this.num = num;
+                this.name = name;
+                this.job = job;
+            
+                this.result = function(){
+                    document.write(this.num + ". 내이름은 " + this.name + "이며 직업은 " + this.job + "입니다.<br>" );
+                }
+            }
+            const info = new func("1","여찬","웹 퍼블리셔")
+            const info2 = new func("2","여찬","웹 개발자")
+            
+            info.result();
+            info2.result();
+
+
+            //1. 내 이름은 여찬이며 직업은 웹 퍼블리셔 입니다.
+
+
+        }
+
+    </script>
+</body>
+
+</html>

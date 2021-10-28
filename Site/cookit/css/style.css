@@ -1,0 +1,244 @@
+/* warp */
+#warp {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+/* header */
+#header {
+    height: 80px;
+}
+
+#header h1 {
+    float: left;
+    padding: 20px 0 10px 0;
+}
+
+#header h1 img {
+    width: 100px;
+}
+
+#header .nav {
+    float: right;
+}
+
+#header .nav li {
+    float: left;
+}
+
+#header .nav li a {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 24px 20px 20px 20px;
+}
+
+/* banner */
+#banner{
+    height: 389px;
+    overflow: hidden;
+}
+#banner img {
+    display: block;
+    width: 100%;
+}
+
+.sliderList {
+    position: relative;
+    height: 389px;
+    width: 1000px;
+}
+
+.sliderList .sliderImg {
+    position: relative;
+}
+
+.sliderList .sliderImg h2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #ccc;
+    padding: 10px 30px;
+    border-radius: 20px;
+}
+
+
+
+/* content1 */
+#content1 {
+    margin-top: 20px;
+}
+
+#content1 .left {
+    float: left;
+    width: 49%;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-right: 2%;
+    background: #f2f2f2 url(../img/Rectangle\ 9.png) no-repeat right 20px center;
+    background-size: 80px;
+
+}
+
+#content1 .left .title {
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+
+#content1 .left .desc {
+    padding-bottom: 15px;
+    color: #666;
+    font-size: 14px;
+}
+
+#content1 .left .btn {
+    background: url(../img/Rectangle\ 10.png) no-repeat left center;
+    background-size: 15px;
+    padding-left: 25px;
+}
+
+#content1 .right {
+    float: left;
+    width: 49%;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-right: 0;
+    background: #f2f2f2 url(../img/Rectangle\ 12.png) no-repeat right 20px center;
+    background-size: 80px;
+}
+
+#content1 .right .title {
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+
+#content1 .right .desc {
+    padding-bottom: 15px;
+    color: #666;
+    font-size: 14px;
+}
+
+#content1 .right .btn {
+    background: url(../img/Rectangle\ 11.png) no-repeat left center;
+    background-size: 15px;
+    padding-left: 25px;
+}
+
+#content1 .right .btn em {
+    padding-left: 5px;
+    font-size: 13px;
+    font-style: normal;
+    color: #999;
+}
+
+/* content2 */
+#content2 {
+    margin-top: 30px;
+}
+
+#content2 h2 {
+    float: left;
+    display: inline-block;
+    font-size: 24px;
+    padding-bottom: 10px;
+}
+
+#content2 h3 {
+    float: left;
+    margin-left: 5px;
+    font-size: 24px;
+    color: #999;
+}
+
+#content2 .best {
+    display: block;
+}
+
+#content2 .best figure {
+    float: left;
+    width: 32%;
+    margin-right: 2%;
+}
+
+#content2 .best figure img {
+    margin-top: 20px;
+    width: 100%;
+}
+
+#content2 .best figure:last-child {
+    margin-right: 0;
+}
+
+#content2 .best figcaption {
+    margin-top: 9px;
+    font-size: 14x;
+    font-weight: bold;
+}
+
+#content2 .best em {
+    font-style: normal;
+    margin-left: 7px;
+    font-size: 13px;
+    color: #999;
+}
+
+#content2 .best p {
+    margin-top: 5px;
+}
+
+#content2 .best p img {
+    float: right;
+    width: 35px;
+    margin-top: -18px;
+}
+
+/* footer */
+#footer {
+    margin-top: 50px;
+    padding: 50px 0;
+    background: #202020;
+}
+
+#footer h2 {
+    float: left;
+}
+
+#footer h2 img {
+    margin-left: 10px;
+    width: 150px;
+}
+
+#footer .foot {
+    float: right;
+}
+
+#footer .foot ul {
+    padding-bottom: 10px;
+}
+
+#footer .foot ul li {
+    display: inline;
+}
+
+#footer .foot ul li a {
+    color: #fff;
+    padding-right: 10px;
+}
+
+#footer .foot address {
+    padding-right: 10px;
+    font-size: 10px;
+    font-style: normal;
+    color: #666;
+}
+
+#footer .foot li::after {
+    content: "|";
+    color: rgb(75, 75, 75);
+    margin: 0 4px;
+}
+
+#footer .foot li:last-child:after {
+    content: "";
+}

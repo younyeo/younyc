@@ -1,0 +1,340 @@
+body {
+    background-color: #F3F3F3;
+}
+
+.imageType {
+    margin: 150px 0;
+    background-color: #fff;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+}
+
+/* imageTypee01 */
+.imageType01 {
+    font-family: 'GmarketSans';
+    padding: 100px 0;
+}
+
+.imageType01 h2 {
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 36px;
+}
+
+.imageType01 .image-wrap {
+    overflow: hidden;
+}
+
+.imageType01 .image {
+    position: relative;
+    float: left;
+    width: 590px;
+    height: 385px;
+    overflow: hidden;
+}
+
+.imageType01 .image:first-child {
+    margin-right: 20px;
+}
+
+.imageType01 .image .image-cont {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    color: #fff;
+}
+
+.imageType01 .image .image-title {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.imageType01 .image .image-desc {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+    padding-right: 30%;
+    word-break: keep-all;
+    overflow: hidden;
+    /* 두줄 효과 */
+    display: -webkit-box;
+    /* 벤터 프리픽스 */
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.imageType01 .image .image-btn {
+    padding: 8px 18px;
+    display: inline-block;
+    background-color: #777;
+    color: #fff;
+    margin-top: 10px;
+}
+
+
+
+/* 2 */
+
+.imageType02 {
+    font-family: 'GmarketSans';
+    padding: 100px 0;
+}
+
+.imageType02 h2 {
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 36px;
+}
+
+.imageType02 .image-wrap {
+    display: flex;
+    justify-content: space-between;
+    /* 가로 정렬 사진이 위드값을 준 후에도 안 벌어지면 강제로 이걸로 벌림 */
+}
+
+.imageType02 .image {
+    width: 386px;
+    position: relative;
+    perspective: 800px;
+}
+
+.imageType02 .image::after {
+    content: '';
+    background: #fff;
+    opacity: 0.7;
+    display: block;
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    right: 30px;
+    bottom: 30px;
+}
+
+.imageType02 .image .image-img {}
+
+.imageType02 .image .image-cont {
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    color: #fff;
+    text-align: center;
+    z-index: 1000;
+    /* 위로 올리는거 */
+}
+
+
+.imageType02 .image .image-title {
+    font-size: 25px;
+    font-weight: 500;
+    color: #000;
+}
+
+.imageType02 .image .image-btn {
+    color: #fff;
+    padding: 7px 24px 5px 24px;
+    background: #000;
+    border-radius: 40px;
+    font-weight: 300;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+/* testType03 */
+
+.imageType03 {
+    padding: 100px 0;
+}
+
+.imageType03 h2 {
+    font-size: 50px;
+    margin-bottom: 2%;
+}
+
+.imageType03 .image-wrap {
+    display: grid;
+    grid-template-columns: repeat(4, 285px);
+    grid-auto-rows: 285px;
+    gap: 20px;
+}
+
+.imageType03 .image-wrap .image:first-child {
+    width: 594px;
+    height: 594px;
+    grid-column: 1/3;
+    grid-row: 1/3;
+}
+
+.imageType03 .image-wrap .image .image-cont {
+    width: 594px;
+    position: absolute;
+    bottom: 14px;
+    padding-bottom: 12px
+}
+
+.imageType03 .image-wrap .image .image-cont .image-title1 {
+    color: #fff;
+    position: absolute;
+    padding: 5px 7px 0px 7px;
+    bottom: 200px;
+    left: 20px;
+    font-size: 40px;
+    font-family: 'GmarketSans';
+    font-weight: 500;
+}
+
+.imageType03 .image-wrap .image .image-cont .image-title2 {
+    color: #fff;
+    position: absolute;
+    padding: 5px 7px 0px 7px;
+    bottom: 400px;
+    left: 10px;
+    font-size: 30px;
+    font-family: 'GmarketSans';
+    font-weight: 500;
+}
+
+.imageType03 .image-wrap .image .image-cont .image-title3 {
+    color: #fff;
+    position: absolute;
+    padding: 5px 7px 0px 7px;
+    bottom: 400px;
+    left: 10px;
+    font-size: 30px;
+    font-family: 'GmarketSans';
+    font-weight: 500;
+}
+
+.imageType03 .image-wrap .image .image-cont .image-title4 {
+    color: #fff;
+    position: absolute;
+    padding: 5px 7px 0px 7px;
+    bottom: 100px;
+    left: 10px;
+    font-size: 30px;
+    font-family: 'GmarketSans';
+    font-weight: 500;
+}
+
+.imageType03 .image-wrap .image .image-cont .image-title5 {
+    color: #fff;
+    position: absolute;
+    padding: 5px 7px 0px 7px;
+    bottom: 100px;
+    left: 10px;
+    font-size: 30px;
+    font-family: 'GmarketSans';
+    font-weight: 500;
+}
+
+.imageType03 .image-wrap .image .image-cont .image-desc {
+    color: #fff;
+    position: absolute;
+    padding: 5px 7px 0px 7px;
+    bottom: 130px;
+    left: 20px;
+    font-size: 20px;
+    font-family: 'GmarketSans';
+    font-weight: 500;
+}
+
+/* imageType04 */
+
+.imageType04 {
+    font-family: 'NanumSquare';
+    padding: 100px 0;
+}
+
+.imageType04 h2 {
+    font-size: 44px;
+    text-align: center;
+    font-weight: 800;
+}
+
+.imageType04 p {
+    font-size: 18px;
+    margin-top: 12px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-weight: 300;
+    color: #000;
+}
+
+.imageType04 .image-wrap {
+    overflow: hidden;
+}
+
+.imageType04 .image {
+    float: left;
+    width: 381px;
+    height: 594px;
+    margin: 0 12.5px 40px 13px;
+    border-radius: 8px;
+    border: solid 1px #e6e6e6;
+}
+
+.imageType04 .image:nth-child(1),
+.imageType04 .image:nth-child(4) {
+    margin-left: 0px;
+}
+
+.imageType04 .image:nth-child(3),
+.imageType04 .image:nth-child(6) {
+    margin-right: 0px;
+}
+
+.imageType04 .image:nth-child(4),
+.imageType04 .image:nth-child(5),
+.imageType04 .image:nth-child(6) {
+    margin-bottom: 0px;
+}
+
+.imageType04 .image .image-img {
+    margin-bottom: 25px;
+}
+
+.imageType04 .image .image-title {
+    font-family: 'GmarketSans';
+    display: inline-block;
+    font-size: 19px;
+    font-weight: 800;
+    margin: 37px 0px 0px 41px;
+}
+
+.imageType04 .image .new {
+    padding: 4px 8px;
+    font-size: 11px;
+    font-weight: 800;
+    color: #fff;
+    border-radius: 30px;
+    background-color: #FA615B;
+}
+
+.imageType04 .image .image-desc {
+    line-height: 1.8;
+    display: block;
+    font-size: 17px;
+    font-weight: 500;
+    color: #555555;
+    margin: 11px 11px 20px 40px;
+}
+
+.imageType04 .image .image-button2 {
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 3px;
+    border: solid 1px #c4c4c4;
+    color: #c4c4c4;
+    margin-left: 40px;
+}
+
+.imageType04 .image .image-button1 {
+    margin-top: 15px;
+    margin-left: 35px;
+    margin-right: -35px;
+    color: #fff;
+    border-radius: 3px;
+    padding: 10px 20px;
+    border:none;
+    background-color: #05D686;
+}

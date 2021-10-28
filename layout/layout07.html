@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 연습10</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    @font-face {
+        font-family: 'GmarketSansBold';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    body{
+        font-size: 60px;
+        color: #fff;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: 'GmarketSansBold';
+    }
+    #header{
+        width: 100%;
+        height: 115px;
+        background-color: #ffccbc;
+        line-height: 115px;
+    }
+    #banner{
+        width: 100%;
+        height: 750px;
+        background-color: #ffab91;
+        line-height: 750px;
+    }
+    #content1{
+        width: 100%;
+        height: 2277px;
+        background-color: #ff8a65;
+        line-height: 2277px;
+    }
+    #content2{
+        width: 100%;
+        height: 2566px;
+        background-color: #ff7043;
+        line-height: 2566px;
+    }
+    #content3{
+        width: 100%;
+        height: 527px;
+        background-color: #ff5722;
+        line-height: 527px;
+    }
+    #foortr{
+        width: 100%;
+        height: 275px;
+        background-color: #bf360c;
+        line-height: 275px;
+    }
+    .container{
+        width: 1200px;
+        height: inherit;
+        background-color: rgba(0,0,0,0.3);
+        margin: 0 auto;
+    }
+    .container .title {
+        width: 1200px;
+        height: 100px;
+        background-color: #795548;
+        margin: 0 auto;
+        line-height: 100px;
+    }
+    .container .box1 {
+        width: 600px;
+        height: 400px;
+        background-color: #a1887f;
+        margin: 0 auto;
+        float: left;
+        line-height: 400px;
+    }
+    .container .box2 {
+        width: 600px;
+        height: 400px;
+        background-color: #8d6e63;
+        margin: 0 auto;
+        float: left;
+        line-height: 400px;
+    }
+</style>
+<body>
+    <div>
+        <div id="header">
+            <div class="container">header</div>
+        </div>
+        <div id="banner">
+            <div class="container">banner</div>
+        </div>
+        <div id="content1">
+            <div class="container">
+                <div class="title">title</div>
+                content1
+            </div>
+        </div>
+        <div id="content2">
+            <div class="container">
+                <div class="box1">box1</div>
+                <div class="box2">box2</div>
+                content2
+            </div>
+        <div id="content3">
+            <div class="container">content3</div>
+        </div>
+        <div id="foortr">
+            <div class="container">foortr</div>
+        </div>
+    </div>
+</body>
+</html>

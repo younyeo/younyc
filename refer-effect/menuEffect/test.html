@@ -1,0 +1,251 @@
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Menu Effect&lt;/title&gt;
+
+  &lt;link rel="stylesheet" href="../assets/css/style.css"&gt;
+  &lt;link rel="stylesheet" href="../assets/css/highlight.css"&gt;
+
+  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"&gt;&lt;/script&gt;
+  &lt;style&gt;
+    #tab-menu {
+      font-family: 'NEXONLv1Gothic';
+      max-width: 600px;
+      background: rgb(175, 175, 175);
+      position: absolute;
+      left: 50%; top: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 5px;
+      color: #fff;
+      overflow: hidden;
+    }
+    
+    .tab-btn ul{
+      display: flex;
+    }
+
+    .tab-btn li{
+      width: 20%;
+      list-style: none;
+      text-align: center;
+    }
+
+    .tab-btn li a{
+      color: #fff;
+      text-decoration: none;
+      padding: 18px 15px 15px 15px;
+      display: block;
+    }
+
+    .tab-btn li.active a{
+      border-bottom: 3px solid #000;
+      color: #000;
+    }
+
+    .tab-cont {
+      background-color: #fff;
+      padding: 20px;
+      color: #222;
+    }
+    .tab-cont &gt; div {
+      display: none;
+    }
+    .tab-cont &gt; div:first-child {
+      display: block;
+    }
+    .tab-cont &gt; div h2 {
+      margin-bottom: 10px;
+    }
+    .tab-cont &gt; div p {
+      line-height: 1.6;
+    }
+
+
+  &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body class="bg bg1"&gt;
+
+  &lt;!-- contents --&gt;
+  &lt;main&gt;
+    &lt;div id="tab-menu"&gt;
+      &lt;div class="tab-btn"&gt;
+        &lt;ul&gt;
+          &lt;li class="active"&gt;&lt;a href="#"&gt;Tab1&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Tab2&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Tab3&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Tab4&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Tab5&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+      &lt;div class="tab-cont"&gt;
+        &lt;div&gt;
+          &lt;h2&gt;P.시루스&lt;/h2&gt;
+          &lt;p&gt;최고에 도달하려면 최저에서 시작하라.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;h2&gt;제임스 딘&lt;/h2&gt;
+          &lt;p&gt;평생 살 것처럼 꿈을 꾸어라.그리고 내일 죽을 것처럼 오늘을 살아라.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;h2&gt;엘사 맥스웰&lt;/h2&gt;
+          &lt;p&gt;먼저 자신을 비웃어라. 다른 사람이 당신을 비웃기 전에&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;h2&gt;터키 속담&lt;/h2&gt;
+          &lt;p&gt;계단을 밟아야 계단 위에 올라설수 있다.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;h2&gt;헨리 포드&lt;/h2&gt;
+          &lt;p&gt;도중에 포기하지 말라. 망설이지 말라. 최후의 성공을 거둘 때까지 밀고 나가자.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/main&gt;
+  &lt;!-- contents --&gt;
+
+  &lt;!-- info --&gt;
+  &lt;div class="info"&gt;
+    &lt;h1&gt;javascript Menu Effect 01&lt;/h1&gt;
+    &lt;p&gt;메뉴 이펙트 - 탭 메뉴&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div class="info right"&gt;
+    &lt;ul&gt;
+      &lt;li class="active"&gt;&lt;a href="javascriptME01.html.html"&gt;1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="javascriptME02.html.html"&gt;2&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="javascriptME03.html.html"&gt;3&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="javascriptME04.html.html"&gt;4&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="javascriptME05.html.html"&gt;5&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="jqureyME01.html"&gt;1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="jqureyME02.html"&gt;2&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="jqureyME03.html"&gt;3&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="jqureyME04.html"&gt;4&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="jqureyME05.html"&gt;5&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+
+  &lt;div class="info bottom"&gt;
+    &lt;button&gt;소스보기&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;!-- //info --&gt;
+
+  &lt;!-- modal --&gt;
+  &lt;div id="modal"&gt;
+    &lt;div class="modal-bg"&gt;
+      &lt;div class="modal-cont"&gt;
+        &lt;div class="code-view"&gt;
+          &lt;div class="view-header"&gt;
+            &lt;div class="dot" aria-hidden="true"&gt;
+              &lt;span&gt;&lt;/span&gt;
+              &lt;span&gt;&lt;/span&gt;
+              &lt;span&gt;&lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="view-title"&gt;
+            &lt;ul&gt;
+              &lt;li class="active"&gt;&lt;a href="#"&gt;HTML&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href="#"&gt;CSS&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href="#"&gt;Javascript&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/div&gt;
+          &lt;div class="view-cont"&gt;
+&lt;pre&gt;&lt;code class="language-html"&gt;&lt;/code&gt;&lt;/pre&gt;
+              &lt;div&gt;html code&lt;/div&gt;
+&lt;pre&gt;&lt;code class="language-css"&gt;&lt;/code&gt;&lt;/pre&gt;
+              &lt;div&gt;css code&lt;/div&gt;
+&lt;pre&gt;&lt;code class="language-javascript"&gt;&lt;/code&gt;&lt;/pre&gt;
+              &lt;div&gt;javascript code&lt;/div&gt;
+&lt;!--               
+              
+              
+              &lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;link href=&quot;/path/to/tailwind.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;!-- ... --&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- ... --&gt;
+&lt;/body&gt;
+&lt;/html&gt; --&gt;
+            &lt;/code&gt;&lt;/pre&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;button&gt;닫기&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;!-- //modal --&gt;
+
+
+  &lt;script src="../assets/js/custom.js"&gt;
+    // 선생님 버전
+    //   document.querySelector(".info button").addEventListener("click", function(){
+    //   document.querySelector("#modal").classList.add("show");
+    // });
+
+    // document.querySelector(".modal-cont button").addEventListener("click", function(){
+    //   document.querySelector("#modal").classList.add("hide");
+    // });
+
+    //자바스크립트로 변환 -내가한 버전
+    // const infoShow = document.querySelector(".info button");
+    // const modal = document.querySelector("#modal");
+    // const modalHide = document.querySelector("#modal button");
+
+    // infoShow.addEventListener("click", function() {
+    //      modal.classList.remove("show", "hide");
+    //      modal.classList.add("show");
+    // });
+
+    // modalHide.addEventListener("click", function() {
+    //     modal.classList.remove("show", "hide");
+    //     modal.classList.add("hide");
+    // });
+
+    //제이쿼리로
+    // $(".info button").click(function () {
+    //   $("#modal").removeClass().addClass("show");
+    // });
+
+    // $("#modal button").click(function () {
+    //   $("#modal").addClass("hide");
+    // });
+  &lt;/script&gt;
+
+  &lt;script src="../assets/js/custom.js"&gt;&lt;/script&gt;
+  &lt;script src="../assets/js/highlight.min.js"&gt;&lt;/script&gt;
+  &lt;script&gt;
+   const tabBtn = document.querySelectorAll(".tab-btn ul li");
+   const tabCont = document.querySelectorAll(".tab-cont &gt; div");
+
+   //1.버튼을 클릭하면 클릭한 버튼한테 active 추가
+
+   tabBtn.forEach((element, index) =&gt; {
+    element.addEventListener("click",function(){
+    
+      tabBtn.forEach(el =&gt; {
+        el.classList.remove("active");
+      });
+      element.classList.add("active");
+     
+      tabCont.forEach(el =&gt; {
+        el.style.display = "none";
+      });
+      tabCont[index].style.display = "block";
+    });
+   })
+  &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;

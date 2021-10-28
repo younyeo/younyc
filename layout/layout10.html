@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 연습10</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            margin: 0 auto;
+        }
+        
+        header{
+            background-color: #FBE4EC;
+            height: 100px;
+            width: 100%;
+        }
+        body{
+            background-color: #FBE4EC;
+        }
+        aside{
+            background-color: #F48FB1;
+            height: 400px;
+            width: 100%;
+        }
+        section{
+            background-color: #EC407A;
+            height: 600px;
+            width: 100%;
+        }
+        footer{
+            background-color: #D81A60;
+            height: 100px;
+            width: 100%;
+        }
+        .container{
+            background-color: rgba(212, 212, 212, 0.3);
+            height: inherit;
+            width: 1200px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <div class="container"></div>
+            
+        </header>
+        <main>
+            <aside>
+                <div class="container"></div>
+            </aside>
+            <section>
+                <div class="container"></div>
+            </section>
+            <div class="container"></div>
+        </main>
+        <footer>
+            <div class="container"></div>
+        </footer>
+    </div>
+</body>
+</html>

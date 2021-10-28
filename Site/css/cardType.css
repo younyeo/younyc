@@ -1,0 +1,385 @@
+/* 카드 타입 유형 */
+body {
+    background-color: #f3f3f3;
+}
+
+.cardType {
+    margin: 100px 0;
+    background-color: #fff;
+    box-shadow: 0 0 50px rgb(0 0 0 / 10%);
+}
+
+/* cardType01 */
+
+.cardType01 {
+    font-family: 'S-CoreDream';
+}
+
+.cardType01 h2 {
+    font-weight: 500;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.cardType01 p {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 1.28;
+    margin-bottom: 40px;
+}
+
+.cardType01 {
+    font-family: 'NEXON Lv1 Gothic OTF';
+    padding: 60px 0;
+}
+
+.cardType01 .card-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardType01 .card-wrap>div {
+    width: 387px;
+}
+
+.cardType01 .card .card-title {
+    display: block;
+    font-size: 32px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.cardType01 .card .card-desc {
+    display: block;
+    font-size: 20px;
+    font-weight: 300;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    margin-top: 10px;
+}
+
+.cardType01 .card .card-keyword {
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 0.5;
+}
+
+
+
+/* 시험 */
+
+.cardType02 {
+    font-family: 'S-CoreDream';
+    padding: 97px 0 100px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.cardType02 h2 {
+    font-weight: 500;
+    font-size: 50px;
+    margin: 0 115px 22px 116px;
+    text-align: center;
+}
+
+.cardType02 p {
+    font-weight: 300;
+    font-size: 26px;
+    text-align: center;
+}
+
+
+.cardType02 .card-wrap {
+    display: flex;
+}
+
+.cardType02 .card {
+    display: inline-block;
+    width: 285px;
+    height: 356px;
+    margin: 40px 20px 0 0;
+    padding: 15px 15px 16px 14px;
+    border-radius: 5px;
+    border: solid 1px #e6e6e6;
+    box-sizing: border-box;
+}
+
+.cardType02 .card .card-title {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 24px;
+    font-style: normal;
+    margin: 8px 0 6px 0;
+}
+
+.cardType02 .card .card-desc {
+    display: inline-block;
+    font-weight: 300;
+    font-size: 14px;
+    font-style: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.cardType02 .card .card-word span {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 10px;
+    color: #fff;
+    padding: 4px 16px 3px;
+    margin-top: 6px;
+    border-radius: 20px;
+    background-color: #000;
+}
+
+/* cardType03 선생님꺼 */
+
+.cardType03 {
+    padding: 100px 0;
+    font-family: "NanumSquare";
+    position: relative;
+}
+
+.cardType03 h2 {
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 4px;
+}
+
+.cardType03 p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.28;
+    margin-bottom: 50px;
+}
+
+.cardType03 .popular {
+    position: absolute;
+    right: 0;
+    top: 180px;
+}
+
+.cardType03 .card-wrap .card {
+    margin-bottom: 28px;
+}
+
+.cardType03 .card-wrap .card-img {
+    width: 285px;
+    height: 185px;
+    position: absolute;
+}
+
+.cardType03 .card-wrap .card .right {
+    padding-left: 305px;
+}
+
+.cardType03 .card-wrap .card .card-cate {
+    font-size: 14px;
+    font-weight: 800;
+    background: #000;
+    padding: 4px 14px 3px 15px;
+    color: #fff;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.cardType03 .card-wrap .card .card-cate.red {
+    background: #ff5151;
+}
+
+.cardType03 .card-wrap .card .card-cate.blue {
+    background: #5465ff;
+}
+
+.cardType03 .card-wrap .card .card-cate.green {
+    background: #11c865;
+}
+
+.cardType03 .card-wrap .card .card-tit {
+    display: block;
+    font-weight: bold;
+    font-size: 26px;
+    margin-top: 10px;
+}
+
+.cardType03 .card-wrap .card .card-desc {
+    font-size: 16px;
+    line-height: 1.53;
+    color: #555;
+}
+
+.cardType03 .card-wrap .card .card-date {
+    display: block;
+    color: #555;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.4;
+    text-decoration: underline;
+    margin-top: 20px;
+}
+
+.testType01 {
+    padding: 100px 0;
+}
+
+.testType01 h2 {
+    font-family: 'NEXONLv1Gothic';
+    font-weight: 700;
+    font-size: 52px;
+    margin-bottom: 36px;
+    text-align: center;
+    line-height: 1.4;
+    margin-bottom: 5%;
+}
+
+.testType01 .image-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.testType01 .image {
+    position: relative; 
+    background-color: #f2f2f2;
+    width: 400px;
+
+    margin: 10px;
+}
+
+.testType01 .image .image-img {}
+
+.testType01 .image .image-cont {
+    text-align: left;
+    z-index: 1000; /* 위로 올리는거 */
+}
+
+.testType01 .image .image-btn {
+    font-family: 'NEXONLv2Gothic'; 
+    position: absolute;
+    font-size: 14px;
+    color: #abaaaa;  
+    top: 10%;
+    left: 11%;  
+    z-index: 1000; /* 위로 올리는거 */
+  }
+
+.testType01 .image .image-title {
+    font-family: 'NEXONLv2Gothic';
+    position: absolute;
+    top: 15%;
+    left: 11%;    
+    font-size: 20px;
+    font-weight: 700;
+    color: #000;
+    line-height: 1.5;
+}
+
+
+
+/* imageType04 */
+
+.imageType04 {
+    font-family: 'NanumSquare';
+    padding: 100px 0;
+}
+
+.imageType04 h2 {
+    font-size: 44px;
+    text-align: center;
+    font-weight: 800;
+}
+
+.imageType04 p {
+    font-size: 18px;
+    margin-top: 12px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-weight: 300;
+    color: #000;
+}
+
+.imageType04 .image-wrap {
+    overflow: hidden;
+}
+
+.imageType04 .image {
+    float: left;
+    width: 381px;
+    height: 594px;
+    margin: 0 12.5px 40px 13px;
+    border-radius: 8px;
+    border: solid 1px #e6e6e6;
+}
+
+.imageType04 .image:nth-child(1),
+.imageType04 .image:nth-child(4) {
+    margin-left: 0px;
+}
+
+.imageType04 .image:nth-child(3),
+.imageType04 .image:nth-child(6) {
+    margin-right: 0px;
+}
+
+.imageType04 .image:nth-child(4),
+.imageType04 .image:nth-child(5),
+.imageType04 .image:nth-child(6) {
+    margin-bottom: 0px;
+}
+
+.imageType04 .image .image-img {
+    margin-bottom: 25px;
+}
+
+.imageType04 .image .image-title {
+    font-family: 'GmarketSans';
+    display: inline-block;
+    font-size: 19px;
+    font-weight: 800;
+    margin: 37px 0px 0px 41px;
+}
+
+.imageType04 .image .new {
+    padding: 4px 8px;
+    font-size: 11px;
+    font-weight: 800;
+    color: #fff;
+    border-radius: 30px;
+    background-color: #FA615B;
+}
+
+.imageType04 .image .image-desc {
+    line-height: 1.8;
+    display: block;
+    font-size: 17px;
+    font-weight: 500;
+    color: #555555;
+    margin: 11px 11px 20px 40px;
+}
+
+.imageType04 .image .image-button2 {
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 3px;
+    border: solid 1px #c4c4c4;
+    color: #c4c4c4;
+    margin-left: 40px;
+}
+
+.imageType04 .image .image-button1 {
+    margin-top: 15px;
+    margin-left: 35px;
+    margin-right: -35px;
+    color: #fff;
+    border-radius: 3px;
+    padding: 10px 20px;
+    border:none;
+    background-color: #05D686;
+}

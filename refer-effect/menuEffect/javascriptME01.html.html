@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Menu Effect</title>
+
+	<link rel="stylesheet" href="../assets/css/style.css">
+	<link rel="stylesheet" href="../assets/css/highlight.css">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<style>
+		#tab-menu {
+			font-family: 'NEXONLv1Gothic';
+			max-width: 600px;
+			background: #0d47a1   ;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			border-radius: 5px;
+			color: #fff;
+			overflow: hidden;
+		}
+
+		.tab-btn ul {
+			display: flex;
+		}
+
+		.tab-btn li {
+			width: 20%;
+			list-style: none;
+			text-align: center;
+		}
+
+		.tab-btn li a {
+			font-weight: 700;
+			color: #01579b;
+			text-decoration: none;
+			padding: 18px 15px 15px 15px;
+			display: block;
+		}
+
+		.tab-btn li.active a {
+			border-bottom: 3px solid #e3f2fd ;
+			color: #fff;
+		}
+
+		.tab-cont {
+			background-color: #fff;
+			padding: 20px;
+			color: #222;
+		}
+
+		.tab-cont>div {
+			display: none;
+		}
+
+		.tab-cont>div:first-child {
+			display: block;
+		}
+
+		.tab-cont>div h2 {
+			margin-bottom: 10px;
+		}
+
+		.tab-cont>div p {
+			line-height: 1.6;
+		}
+	</style>
+</head>
+
+<body class="bg bg1 ">
+
+	<!-- contents -->
+	<main>
+		<div id="tab-menu">
+			<div class="tab-btn">
+				<ul>
+					<li class="active"><a href="#">Tab1</a></li>
+					<li><a href="#">Tab2</a></li>
+					<li><a href="#">Tab3</a></li>
+					<li><a href="#">Tab4</a></li>
+					<li><a href="#">Tab5</a></li>
+				</ul>
+			</div>
+			<div class="tab-cont">
+				<div>
+					<h2>P.시루스</h2>
+					<p>최고에 도달하려면 최저에서 시작하라.</p>
+				</div>
+				<div>
+					<h2>제임스 딘</h2>
+					<p>평생 살 것처럼 꿈을 꾸어라.그리고 내일 죽을 것처럼 오늘을 살아라.</p>
+				</div>
+				<div>
+					<h2>엘사 맥스웰</h2>
+					<p>먼저 자신을 비웃어라. 다른 사람이 당신을 비웃기 전에</p>
+				</div>
+				<div>
+					<h2>터키 속담</h2>
+					<p>계단을 밟아야 계단 위에 올라설수 있다.</p>
+				</div>
+				<div>
+					<h2>헨리 포드</h2>
+					<p>도중에 포기하지 말라. 망설이지 말라. 최후의 성공을 거둘 때까지 밀고 나가자.</p>
+				</div>
+			</div>
+		</div>
+	</main>
+	<!-- contents -->
+
+	<!-- info -->
+	<div class="info">
+		<h1>javascript Menu Effect 01</h1>
+		<p>메뉴 이펙트 - 탭 메뉴</p>
+	</div>
+
+	<div class="info right">
+		<ul>
+			<li class="active"><a href="javascriptME01.html.html">1</a></li>
+			<li><a href="javascriptME02.html.html">2</a></li>
+			<li><a href="javascriptME03.html.html">3</a></li>
+			<li><a href="javascriptME04.html.html">4</a></li>
+			<li><a href="javascriptME05.html.html">5</a></li>
+		</ul>
+		<ul>
+			<li><a href="jqureyME01.html">1</a></li>
+			<li><a href="jqureyME02.html">2</a></li>
+			<li><a href="jqureyME03.html">3</a></li>
+			<li><a href="jqureyME04.html">4</a></li>
+			<li><a href="jqureyME05.html">5</a></li>
+		</ul>
+	</div>
+
+	<div class="info bottom">
+		<button>소스보기</button>
+	</div>
+	<!-- //info -->
+
+	<!-- modal -->
+	<div id="modal">
+		<div class="modal-bg">
+			<div class="modal-cont">
+				<div class="code-view">
+					<div class="view-header">
+						<div class="dot" aria-hidden="true">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+					</div>
+					<div class="view-title">
+						<ul>
+							<li class="active"><a href="#">HTML</a></li>
+							<li><a href="#">CSS</a></li>
+							<li><a href="#">Javascript</a></li>
+						</ul>
+					</div>
+					<div class="view-cont">
+						<div>
+<pre><code class="language-html">&lt;div id="tab-menu"&gt;
+      &lt;div class="tab-btn"&gt;
+        &lt;ul&gt;
+          &lt;li class="active"&gt;&lt;a href="#"&gt;Tab1&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Tab2&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Tab3&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Tab4&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Tab5&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+      &lt;div class="tab-cont"&gt;
+        &lt;div&gt;
+          &lt;h2&gt;P.시루스&lt;/h2&gt;
+          &lt;p&gt;최고에 도달하려면 최저에서 시작하라.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;h2&gt;제임스 딘&lt;/h2&gt;
+          &lt;p&gt;평생 살 것처럼 꿈을 꾸어라.그리고 내일 죽을 것처럼 오늘을 살아라.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;h2&gt;엘사 맥스웰&lt;/h2&gt;
+          &lt;p&gt;먼저 자신을 비웃어라. 다른 사람이 당신을 비웃기 전에&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;h2&gt;터키 속담&lt;/h2&gt;
+          &lt;p&gt;계단을 밟아야 계단 위에 올라설수 있다.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;h2&gt;헨리 포드&lt;/h2&gt;
+          &lt;p&gt;도중에 포기하지 말라. 망설이지 말라. 최후의 성공을 거둘 때까지 밀고 나가자.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+</code></pre>
+						</div>
+						<div>
+<pre><code class="language-css">#tab-menu {
+    max-width: 600px;
+    background: rgb(173, 173, 173);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    overflow: hidden;
+    font-family: 'NEXONLv2Gothic';
+    color: #fff;
+}
+.tab-btn ul {
+    display: flex;
+}
+.tab-btn li {
+    width: 20%;
+    list-style: none;
+    text-align: center;
+}
+.tab-btn li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 18px 15px 15px 15px;
+    display: block;
+}
+.tab-btn li.active a {
+    border-bottom: 3px solid #000;
+    color: #000;
+}
+.tab-cont {
+    background: #fff;
+    padding: 20px;
+    color: #222;
+}
+.tab-cont > div {
+    display: none;
+} 
+.tab-cont > div:first-child {
+    display: block;
+}
+.tab-cont > div h2 {
+    margin-bottom: 10px;
+}
+.tab-cont > div p {
+    line-height: 1.6;
+}							
+</code></pre>
+						</div>
+						<div>
+<pre><code class="language-javascript">const tabBtn = document.querySelectorAll(".view-title ul li");
+const tabCont = document.querySelectorAll(".view-cont > div");
+
+tabBtn.forEach((element, index) => {
+	element.addEventListener("click", function () {
+
+	tabBtn.forEach(el => {
+		el.classList.remove("active");
+	});
+	element.classList.add("active");
+
+	tabCont.forEach(el => {
+		el.style.display = "none";
+	});
+	tabCont[index].style.display = "block";
+	});
+})
+</code></pre>
+						</div>
+					</div>
+				</div>
+				<button>닫기</button>
+			</div>
+		</div>
+	</div>
+	<!-- //modal -->
+
+
+	<script src="../assets/js/custom.js">
+		// 선생님 버전
+		//   document.querySelector(".info button").addEventListener("click", function(){
+		//   document.querySelector("#modal").classList.add("show");
+		// });
+
+		// document.querySelector(".modal-cont button").addEventListener("click", function(){
+		//   document.querySelector("#modal").classList.add("hide");
+		// });
+
+		//자바스크립트로 변환 -내가한 버전
+		// const infoShow = document.querySelector(".info button");
+		// const modal = document.querySelector("#modal");
+		// const modalHide = document.querySelector("#modal button");
+
+		// infoShow.addEventListener("click", function() {
+		//      modal.classList.remove("show", "hide");
+		//      modal.classList.add("show");
+		// });
+
+		// modalHide.addEventListener("click", function() {
+		//     modal.classList.remove("show", "hide");
+		//     modal.classList.add("hide");
+		// });
+
+		//제이쿼리로
+		// $(".info button").click(function () {
+		//   $("#modal").removeClass().addClass("show");
+		// });
+
+		// $("#modal button").click(function () {
+		//   $("#modal").addClass("hide");
+		// });
+	</script>
+
+	<script src="../assets/js/custom.js"></script>
+	<script src="../assets/js/highlight.min.js"></script>
+	<script>
+		     window.onload = function(){
+            agentCheck();   //호환성 체크
+        }
+
+        const tabBtn = document.querySelectorAll(".tab-btn ul li");
+        const tabCont = document.querySelectorAll(".tab-cont > div");
+    
+        tabBtn.forEach((element, index) => {
+            element.addEventListener("click", function(){
+                
+                tabBtn.forEach( el => {
+                    el.classList.remove("active");
+                });
+                element.classList.add("active");
+
+                tabCont.forEach( el => {
+                    el.style.display = "none";
+                })
+                tabCont[index].style.display = "block";
+            });
+        })
+
+        modal();
+
+
+
+
+		// window.onload = function () {
+        //     // init();
+        //     // animate();
+		// 	agentCheck(); //호환성 체크
+        // }
+
+
+		// const tabBtn = document.querySelectorAll(".tab-btn ul li");
+		// const tabCont = document.querySelectorAll(".tab-cont > div");
+
+		// //1.버튼을 클릭하면 클릭한 버튼한테 active 추가
+
+		// tabBtn.forEach((element, index) => {
+		// 	element.addEventListener("click", function () {
+
+		// 		tabBtn.forEach(el => {
+		// 			el.classList.remove("active");
+		// 		});
+		// 		element.classList.add("active");
+
+		// 		tabCont.forEach(el => {
+		// 			el.style.display = "none";
+		// 		});
+		// 		tabCont[index].style.display = "block";
+		// 	});
+		// })
+		// modal();
+	</script>
+</body>
+
+</html>

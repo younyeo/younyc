@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 연습13</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            background-color: #E8F5E9;  
+        }
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        header{
+            background-color: #C8E6C9;
+            width: 100%;
+            height: 100px;
+        }
+        aside {
+            background-color: #A5D6A7;
+            width: 100%;
+            height: 100px;
+        }
+        main {
+            width: 100%;
+            overflow: hidden;
+        }
+        .content1 {
+            background-color: #81C784;
+            width: 30%;
+            height: 1000px;
+            float: left;
+        }
+        .content2 {
+            background-color: #66BB6A;
+            width: 40%;
+            height: 1000px;
+            float: left;
+        }
+        .content3 {
+            background-color: #4CAF50;
+            width: 30%;
+            height: 1000px;
+            float: left;
+        }
+        footer {
+            background-color: #43A047;
+            width: 100%;
+            height: 100px;
+            float: left;
+        }
+        @media (max-width : 1000px){
+            #wrap {
+                width: 100%;
+            }
+            .content1 {
+                width: 30%;
+                height: 700px;
+            }
+            .content2 {
+                width: 70%;
+                height: 700px;
+            }
+            .content3 {
+                width: 100%;
+                height: 300px;
+            }
+        }
+        @media (max-width: 600px){
+            #wrap {
+                width: 100%;
+            }
+            header {
+                width: 100%;
+                height: 200px;
+            }
+            .content1 {
+                width: 100%;
+                height: 300px;
+            }
+            .content2 {
+                width: 100%;
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header></header>
+        <aside></aside>
+        <main>
+            <content class="content1"></content>
+            <content class="content2"></content>
+            <content class="content3"></content>
+        </main>
+        <footer></footer>
+    </div>
+</body>
+</html>

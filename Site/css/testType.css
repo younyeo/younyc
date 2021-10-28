@@ -1,0 +1,202 @@
+body {
+    background-color: #F3F3F3;
+}
+
+.testType {
+    margin: 150px 0;
+    background-color: #fff;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+}
+
+
+/* testType */
+
+.testType01 {
+    padding: 100px 0;
+}
+
+.testType01 h2 {
+    font-family: 'NEXONLv1Gothic';
+    font-weight: 700;
+    font-size: 52px;
+    margin-bottom: 36px;
+    text-align: center;
+    line-height: 1.4;
+    margin-bottom: 5%;
+}
+
+.testType01 .image-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.testType01 .image {
+    position: relative; 
+    background-color: #f2f2f2;
+    width: 400px;
+
+    margin: 10px;
+}
+
+.testType01 .image .image-img {}
+
+.testType01 .image .image-cont {
+    text-align: left;
+    z-index: 1000; /* 위로 올리는거 */
+}
+
+.testType01 .image .image-btn {
+    font-family: 'NEXONLv2Gothic'; 
+    position: absolute;
+    font-size: 14px;
+    color: #abaaaa;  
+    top: 10%;
+    left: 11%;  
+    z-index: 1000; /* 위로 올리는거 */
+  }
+
+.testType01 .image .image-title {
+    font-family: 'NEXONLv2Gothic';
+    position: absolute;
+    top: 15%;
+    left: 11%;    
+    font-size: 20px;
+    font-weight: 700;
+    color: #000;
+    line-height: 1.5;
+}
+
+/* testType02 */
+
+.testType02 {
+    padding: 100px 0;
+}
+
+.testType02 h2 {
+    font-size: 50px;
+    margin-bottom: 2%;
+}
+
+.testType02 .image-wrap {
+    display: grid;
+    grid-template-columns: repeat(4, 285px);
+    grid-auto-rows: 285px;
+    gap: 20px;
+}
+
+.testType02 .image-wrap .image:first-child{
+    width: 594px;
+    height: 594px;
+    grid-column: 1/3;
+    grid-row: 1/3;
+} 
+
+.testType02 .image-wrap .image .image-cont {
+    width: 594px;
+    position: absolute;
+    bottom: 14px;
+    padding-bottom: 12px
+}
+
+.testType02 .image-wrap .image .image-cont .image-title1 {
+    color: #fff;
+    position: absolute;
+    padding: 5px 7px 0px 7px;
+    bottom: 200px;
+    left: 20px;
+    font-size: 40px;
+    font-family: 'GmarketSans';
+    font-weight: 500;
+}
+
+.testType02 .image-wrap .image .image-cont .image-title2 {
+    color: #fff;
+    position: absolute;
+    padding: 5px 7px 0px 7px;
+    bottom: 400px;
+    left: 10px;
+    font-size: 30px;
+    font-family: 'GmarketSans';
+    font-weight: 500;
+}
+
+.testType02 .image-wrap .image .image-cont .image-title3 {
+    color: #fff;
+    position: absolute;
+    padding: 5px 7px 0px 7px;
+    bottom: 400px;
+    left: 10px;
+    font-size: 30px;
+    font-family: 'GmarketSans';
+    font-weight: 500;
+}
+
+.testType02 .image-wrap .image .image-cont .image-title4 {
+    color: #fff;
+    position: absolute;
+    padding: 5px 7px 0px 7px;
+    bottom: 100px;
+    left: 10px;
+    font-size: 30px;
+    font-family: 'GmarketSans';
+    font-weight: 500;
+}
+
+.testType02 .image-wrap .image .image-cont .image-title5 {
+    color: #fff;
+    position: absolute;
+    padding: 5px 7px 0px 7px;
+    bottom: 100px;
+    left: 10px;
+    font-size: 30px;
+    font-family: 'GmarketSans';
+    font-weight: 500;
+}
+
+.testType02 .image-wrap .image .image-cont .image-desc {
+    color: #fff;
+    position: absolute;
+    padding: 5px 7px 0px 7px;
+    bottom: 130px;
+    left: 20px;
+    font-size: 20px;
+    font-family: 'GmarketSans';
+    font-weight: 500;
+}
+/* 
+.testType02 .image-wrap {
+    position: relative;
+}
+
+.testType02 .image-wrap{
+    width: 594px;
+    grid-column: 1/3;
+    grid-row: 1/3;
+}
+
+.testType .testType02 .image-wrap {
+    width: 594px;
+    position: absolute;
+    bottom: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-bottom: 12px
+}
+
+.testType .testType02 .image-wrap .image-cont .image .image-title {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    position: absolute;
+    padding: 5px 7px 0px 7px;
+    bottom: 21px;
+    left: 18px;
+    font-size: 30px;
+    font-family: 'GmarketSans';
+    font-weight: 400;
+}
+
+.testType .testType02 .image-wrap .image-cont .image-title {
+    font-family: 'GmarketSans';
+    font-weight: 400;
+    font-size: 58px;
+    color: #fff;
+} */

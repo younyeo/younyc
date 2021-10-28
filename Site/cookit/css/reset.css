@@ -1,0 +1,26 @@
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+em {
+    text-decoration: none;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.clearfix::before,
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
